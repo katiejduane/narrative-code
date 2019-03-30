@@ -1,0 +1,37 @@
+tech: html, css, vanilla js for DOM manipulation... 
+aim to create something almost like 'choose your own adventure' 
+to make it game-like so i can practice with logic! lots of css animations. 
+create my own JS objects/arrays to loop through for each narrative! maybe like:
+
+poem = [
+    {line: "1: ksjegsegseg",
+    opt1: "skjbegjkbaegsge",
+    opt2: "zkjfkjbkeg"},
+
+    {line: "2a: ksjegsegseg",
+    opt1: "skjbegjkbaegsge",
+    opt2: "zkjfkjbkeg"},
+
+    {line: "2b: ksjegsegseg",
+    opt1: "skjbegjkbaegsge",
+    opt2: "zkjfkjbkeg"},
+]
+
+//that could get out of control if you're not careful so be sure to organize data WELL
+and not go too long/far, reuse some objects, so the poems arne't totally different,
+just maybe some changes but also different order...? could be a good opportunity to use
+find/some/every???
+
+objectives: 
+1. cleaner/more elegant vanilla JS for DOM manipulation
+2. use for ES6+ syntax i've recently learned for practice (array methods, 
+promises, etc) for functionality/movement through the narrative (conditional)
+3. improve ability to use CSS animations
+4. more concepts i want to use: (see recent course work to review what needs 
+practicing!)
+5. use for/in for/of and set time out, set interval, for slow printing of words/lines
+or repeated printing of...?
+
+concept of how narrative(s) should work (pen and paper first, then outline here)
+
+
