@@ -11,13 +11,22 @@
 
 // 1 //poemData (maybe start here, without the randomization, this will be easier, but will still let you practice
 // CSS animation and more elegant DOM manipulation!)
+let nightSky = [
+    'Delicate, threadbare—','partial to sky, to black silk that hangs', 'throwing light off its course',
+    'As if rays could be redirected', 'as if summoning actually serves a purpose, does anything.',
+    'Clear through the rings of Saturn', 'a moon the size of a pebble', 'skirts below, it spins',
+    'conducting matters like ocean waves, and rain', 'I cannot pretend to know anything at all', 
+    'Even these plates I clear,the silverware I place', 'the linen I fold into near-perfect squares',
+    'Where is any of it?', 'And what is it for?'
+]
 
-
-
-
+// i think for the snippets below, i should use those "chance" collages 
+// by various Dada artists as inspiration AND DRASTICALLY SHORTEN THEM (the
+// snippets) so they're more anonymous and can be more easily assigned unqiue
+// meanings by each user....!?!
 
 // 2 // choose-your-own-adventure style story creation (!?!?!?!?)
-//skydiving
+
 let citrusFruits = "I saw them coming down: tiny black crescents in the sky, like slices of darkened citrus fruits, cradled by the air."
 let watching = "Later, standing on the runway, I watched again as they left the plane."
 let whiteDots = "They were nothing more than tiny white dots, barely visible pinpricks of light, until they’d fallen far enough to open up into color: yellow, pink, gold, black, pale green."
@@ -41,36 +50,30 @@ let silent = "For the spectators below, we were silent as we dropped, as we sank
 let falling = "We were above the clouds and then level with the clouds and then below them."
 let drive = "I passed though forests of towering loblolly pines, through pecan orchards filled with light that was sharply angled and golden, lazy and loose in its hold on earth."
 
-//erosion
 let angleOfRepose = "The steepest angle that a slope can maintain before falling away is called its angle of repose."
 let slopeFailure = "At which angle, I wonder, had my life started breaking up like distressed regolith, falling toward some place else?"
 let massWasting = "Any number of stressors can trigger slope failure: but most often, the gentle yet persistent burden of gravity and time."
 let wondering = "I spent every morning with my cup of coffee in the backyard, looking out at all of the kudzu as it grew ferociously over the trees and up the TV tower, wondering what the hell I was doing down here."
 let crumbled = "I am happier, despite the fact that what was once stable, coherent rock has since crumbled."
 
-//gravity
 let bath = "I let myself float for as long as I can and then I take note of my weight against the porcelain as the water vanishes."
 let breathing = "My lungs feel the weight of the body they’re breathing against."
 let fierce = "Feeling gravity on the ground is so commonplace we forget how strong it is, how fierce and constant that attraction."
 let terminalVelocity = "No matter how far they fall, they will never reach a terminal velocity that is fatal to them. "
 let threat = "As humans, though, gravity poses a sincere threat."
 
-//physics
 let einstein = "Albert Einstein proposed something radically different: that gravity was not a force, but a result of the curvature of spacetime."
 let orbit = "Earth does not revolve around the sun because the sun pulls on us, but because we’re falling into curved space."
 let leaveBehind = "They found it by finding what it left behind, the impressions it left in space after it had come and gone."
 let speedOfLife = "But what is the speed of a life? What is the distance it travels? How long does one get? Where does it come from? And where does it go?"
 let sustainMe = "More than anything, I wanted to feel the air sustain me, to feel it hold me in its body—the parachute a medium between forces that don’t ordinarily coalesce."
 
-//love 
-// add more here...
 let gravityIsLove = "I’ve been thinking: maybe gravity is like love."
 let serious = "I didn’t want anything to get in between gravity and me."
 let attachment = "He tapped with his fingers all four points of attachment, over and over, and named them out loud for me, as if knowing where we were connected would make me feel better."
 let youGoIGo = '“You see? You’re not going anywhere without me. Anywhere you go, I go, too.”'
 let trust = "Do we trust life, the earth, the air, the people we love, ourselves: to hold us?"
 
-//resolution
 let free = "Even if I still have so few answers, I’ve already done what frightened me the most.I am free."
 let radioWaves = "Radio waves slosh through space unnoticed by humans."
 let friction = "Air has friction."
