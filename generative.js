@@ -32,3 +32,7 @@
 //         $('.word-info-box').html(newHTML)
 //     })
 // })
+
+// the result word(s), onClick --> pushes that word (the target) to the poem array,
+// and also calls back out to the API using that word as the paramter (along
+// with whatever other parameters i use for searching)
