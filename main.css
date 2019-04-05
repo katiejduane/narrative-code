@@ -1,0 +1,79 @@
+body {
+    background-color: floralwhite;
+}
+
+nav{
+    border: 2px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    z-index: 10;
+}
+
+nav:hover{
+    background-color: hotpink;
+    color: floralwhite;
+}
+
+.nav-menu{
+    display: block;
+    position: absolute;
+    list-style: none;
+    right: 1rem;
+
+}
+
+.option{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.option:hover{
+    border-bottom: 2px solid black;
+    color: black;
+    cursor: crosshair;
+}
+
+.main-container{
+    margin: 4rem 0 0 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alter{
+    margin: 2rem;
+    padding: 2rem;
+    background-color: floralwhite;
+}
+
+.welcome{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+h1:hover{
+    color: hotpink;
+    cursor: default;
+}
+
+.choice{
+    padding: 2px;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+.choice:hover{
+    background-color: aquamarine;
+    cursor: crosshair;
+    /* border-bottom: 2px solid black;
+    box-sizing: border-box; */
+}
+
+
+
+
+

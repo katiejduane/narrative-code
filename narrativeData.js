@@ -32,7 +32,7 @@ let poemData = [
         lines: [
             'Delicate, threadbare—', 'partial to sky, to black silk that hangs', 'throwing light off its course',
             'As if rays could be redirected', 'as if summoning actually serves a purpose, does anything.',
-            'Clear through the rings of Saturn', 'a moon the size of a pebble', 'skirts below, it spins',
+            'Clear through the rings of Saturn', 'a pebble like a moon', 'skirts below, it spins',
             'conducting matters like ocean waves, and rain', 'I cannot pretend to know anything at all',
             'Even these plates I clear,the silverware I place', 'the linen I fold into near-perfect squares',
             'Where is any of it?', 'And what is it for?'
@@ -64,6 +64,17 @@ let poemData = [
 ]
 
 console.log(poemData[0].lines[0])
+
+let homeHTML = `
+    <div class="welcome">
+        <h1>welcome to narrative code</h1>
+        <p>please choose an option to create a story:</p>
+        <ol class="menu">
+            <a href="#"><li>chance poem</li></a>
+            <a href="#"><li>generative</li></a>
+        </ol>
+    </div>
+`
 
 
 // 2 // choose-your-own-adventure style story creation (!?!?!?!?)
