@@ -1,9 +1,14 @@
+/* html{
+    background-color: honeydew;
+} */
+
 body {
     background-color: floralwhite;
 }
 
 nav{
-    border: 2px solid black;
+    background-color: floralwhite;
+    border-bottom: 2px solid black;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,7 +23,7 @@ nav:hover{
 }
 
 .nav-menu{
-    display: block;
+    display: flex;
     position: absolute;
     list-style: none;
     right: 1rem;
@@ -27,6 +32,7 @@ nav:hover{
 
 .option{
     font-family: 'Courier New', Courier, monospace;
+    margin-left: 1rem;
 }
 
 .option:hover{
@@ -36,9 +42,9 @@ nav:hover{
 }
 
 .main-container{
-    margin: 4rem 0 0 0;
+    margin: 3rem 0 0 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,12 +53,18 @@ nav:hover{
 .alter{
     margin: 2rem;
     padding: 2rem;
-    background-color: floralwhite;
+    width: auto;
+    height: auto;
 }
 
 .welcome{
     font-family: 'Courier New', Courier, monospace;
     
+}
+
+.about{
+    font-family: 'Courier New', Courier, monospace;
+    width: 60vw;
 }
 
 h1:hover{

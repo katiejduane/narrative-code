@@ -65,14 +65,30 @@ let poemData = [
 
 console.log(poemData[0].lines[0])
 
-let homeHTML = `
+let homeHTML = 
+
+`
     <div class="welcome">
         <h1>welcome to narrative code</h1>
-        <p>please choose an option to create a story:</p>
+        <p>please choose an option to create a poem:</p>
         <ol class="menu">
-            <a href="#"><li>chance poem</li></a>
-            <a href="#"><li>generative</li></a>
+            <li class="choice">choose-your-own-adventure</li>
+            <li class="choice">generative</li>
         </ol>
+    </div>
+`
+
+let aboutHTML = `
+    <div class="about">
+        <h1>what is narrative code?</h1>
+        <p>i really wanted two things: a way to get more creative/expressive with my coding
+        projects, and a way to practice advanced array methods, callback functions,
+        promises, css animations, and more efficient organization and use of data.</p>
+        <p>narrative code has two parts: a poem-scrambler, which uses 3 poems written by
+        me, plus input from the user, to scramble the poems and create something
+        entirely new. there's also a generative poem (coming soon) which reaches out to the
+        datamuse API based on user input to create a list-type poem. i hope you enjoy them!
+        </p>
     </div>
 `
 
