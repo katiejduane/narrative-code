@@ -5,6 +5,9 @@ let alter = document.querySelector('.alter');
 let advBtn = document.querySelector('#adv');
 let genBtn = document.querySelector('#gen');
 
+let cloud = document.querySelector('#cloud')
+let leaf = document.getElementById('#leaf');
+
 let path;
 
 // array to store lines of poem during narration
@@ -23,24 +26,6 @@ advBtn.addEventListener('click', () => {
 genBtn.addEventListener('click', () => {
     alter.innerHTML = 'Coming soon!';
 })
-
-//poem scrambling ---> two main options: leaf or cloud, while there are numerous
-//options within these two main options, ither or determines which parent function
-//runs...
-
-//cloud 
-let cloud = document.querySelector('#cloud')
-//maybe i'll have to have two complete functions? or use objects? i don't know...
-if(alter.contains(cloud)){
-    console.log('hi')
-    cloud.addEventListener('click',()=>{
-    cloudPoem();
-    })
-}
-
-//leaf
-let leaf = document.getElementById('#leaf');
-
 
 
 
