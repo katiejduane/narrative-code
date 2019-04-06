@@ -45,7 +45,7 @@ let poemData = [
             'with orange clouds and everything', 'even the air, every raindrop', 'shimmered with the color of apricots',
             'a fruit that does not exist here', 'there were fireworks after', 'and I asked him', 
             'if they were to celebrate the rain', 'he only laughed', 'as we stood there, briefly connected',
-            'beneath his mango tree, that everyday', 'sends its fruit earthward', 'without there ever being a fret', 
+            'beneath his mango tree', 'that everyday, sends its fruit earthward', 'without there ever being a fret', 
             'over loss, over absence', 'a long slender branch, carrying one less fruit.'
         ]
     },
@@ -63,34 +63,26 @@ let poemData = [
 
 ]
 
-console.log(poemData[0].lines[0])
+// console.log(poemData[0].lines[0])
 
-let homeHTML = 
+let homeHTML = {
+    title: 'welcome to narrative code',
+    p1: 'please choose an option to create a poem:',
+    li1: 'choose-your-own-adventure',
+    li2: 'generative'
+}
 
-`
-    <div class="welcome">
-        <h1>welcome to narrative code</h1>
-        <p>please choose an option to create a poem:</p>
-        <ol class="menu">
-            <li class="choice">choose-your-own-adventure</li>
-            <li class="choice">generative</li>
-        </ol>
-    </div>
-`
-
-let aboutHTML = `
-    <div class="about">
-        <h1>what is narrative code?</h1>
-        <p>i really wanted two things: a way to get more creative/expressive with my coding
-        projects, and a way to practice advanced array methods, callback functions,
-        promises, css animations, and more efficient organization and use of data.</p>
-        <p>narrative code has two parts: a poem-scrambler, which uses 3 poems written by
+let aboutHTML = {
+    title: 'what is narrative code?',
+    p1: `i really wanted two things: a way to get more creative/expressive with my coding
+        projects, and a way to practice advanced array methods, higher-order functions,
+        css animations, and more efficient organization and use of data.`,
+    p2: `narrative code has two parts: a poem-scrambler, which uses 3 poems written by
         me, plus input from the user, to scramble the poems and create something
         entirely new. there's also a generative poem (coming soon) which reaches out to the
-        datamuse API based on user input to create a list-type poem. i hope you enjoy them!
-        </p>
-    </div>
-`
+        datamuse API based on user input to create a list-type poem. i hope you enjoy them!`
+}
+
 
 
 // 2 // choose-your-own-adventure style story creation (!?!?!?!?)

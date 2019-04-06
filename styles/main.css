@@ -55,15 +55,11 @@ nav:hover{
     padding: 2rem;
     width: auto;
     height: auto;
-}
-
-.welcome{
     font-family: 'Courier New', Courier, monospace;
-    
 }
 
 .about{
-    font-family: 'Courier New', Courier, monospace;
+    
     width: 60vw;
 }
 
@@ -85,6 +81,31 @@ h1:hover{
     box-sizing: border-box; */
 }
 
+button{
+    padding: 0.5rem;
+    margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+    outline: none;
+    border: none;
+}
+
+button:hover{
+    filter: invert(1);
+    text-decoration: underline;
+    outline: none;
+    border: none;
+}
+
+#cloud{
+   background-color: skyblue;
+   color: whitesmoke; 
+}
+
+#leaf{
+    background-color: greenyellow;
+    color: darkmagenta;
+}
 
 
 
