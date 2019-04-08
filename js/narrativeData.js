@@ -52,7 +52,7 @@ let poemData = [
     {
         title: 'air',
         keywords: '',
-        lines: [ 'The air is best when it is so thick', 'that it becomes asubstance: something',
+        lines: [ 'The air is best when it is so thick', 'that it becomes a substance: something',
             'You can feel as you move through it', 'Like space opening and closing', 'Around you', 
             'Peeling itself apart, its skin on your skin', 'when at night, it is so heavy', 'that it hangs off the street lamp',
             'Like a loose veil', 'like a wide and sprawling skirt','when it catches the light and holds it', 

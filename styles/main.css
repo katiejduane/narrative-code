@@ -19,6 +19,7 @@ nav{
 
 nav:hover{
     background-color: hotpink;
+    /* background-color: fuchsia; */
     color: floralwhite;
 }
 
@@ -64,7 +65,9 @@ nav:hover{
 }
 
 h1:hover{
-    color: hotpink;
+    /* color: hotpink; */
+    /* color: tomato; */
+    color: mediumblue;
     cursor: default;
 }
 
@@ -97,6 +100,7 @@ button:hover{
     border: none;
 }
 
+/* various button colors: */
 #cloud{
    background-color: skyblue;
    color: whitesmoke; 
@@ -106,6 +110,17 @@ button:hover{
     background-color: greenyellow;
     color: darkmagenta;
 }
+
+#gold{
+    background-color: goldenrod;
+    color: purple;
+}
+
+#pearl{
+    background-color: whitesmoke;
+    color: gray;
+}
+
 
 
 

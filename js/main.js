@@ -15,19 +15,50 @@ let poemArray = []
 
 
 //menu button functions
+
+// document.arrive(".test-elem", function () {
+//     // 'this' refers to the newly created element
+// });
+// document.getElementsByClass(".container-1").arrive(".test-elem", function () {
+//     // 'this' refers to the newly created element
+// });
+
 advBtn.addEventListener('click', () => {
     alter.innerHTML = '';
-    advOptions('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
-    if(path === 'cloud'){
-        console.log('cloud')
-    }
+    askQuestion('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
 })
 
+// document.getElementsByClassName('.alter').arrive('cloud'), function(){
+//     console.log('hello')
+// }
+
+var observer = new MutationObserver(subscriber);
+
+function subscriber(mutations) {
+    mutations.forEach((mutation) => {
+        console.log(mutation);
+    });
+}
+
+// var test = function(observer){
+//     console.log('observed');
+// }
+var targetNode = document.querySelector('.alter');
+
+var config = {
+    childList: true
+}
+
+observer.observe(targetNode, config)
+   
+
+
+
+
+//generative poem with API
 genBtn.addEventListener('click', () => {
     alter.innerHTML = 'Coming soon!';
 })
-
-
 
 
 //nav button functions
@@ -57,7 +88,7 @@ beginBtn.addEventListener('click', () => {
     welcome.appendChild(list);
     advBtn.addEventListener('click', () => {
         alter.innerHTML = '';
-        advOptions('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
+        askQuestion('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
     })
     genBtn.addEventListener('click', () => {
         alter.innerHTML = 'Coming soon!';
