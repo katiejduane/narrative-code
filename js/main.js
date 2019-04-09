@@ -13,16 +13,7 @@ let path;
 // array to store lines of poem during narration
 let poemArray = []
 
-
-//menu button functions
-
-// document.arrive(".test-elem", function () {
-//     // 'this' refers to the newly created element
-// });
-// document.getElementsByClass(".container-1").arrive(".test-elem", function () {
-//     // 'this' refers to the newly created element
-// });
-
+//start the choose-your-own-adventure style poem!
 advBtn.addEventListener('click', () => {
     alter.innerHTML = '';
     startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
