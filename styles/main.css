@@ -1,6 +1,4 @@
-/* html{
-    background-color: honeydew;
-} */
+/* A RULE FOR THIS PROGRAM IS THAT ALL COLORS MUST BE CSS-NAME-DESIGNATED COLORS! NO RGB OR HEX! :D */
 
 body {
     background-color: floralwhite;
@@ -18,8 +16,8 @@ nav{
 }
 
 nav:hover{
-    background-color: hotpink;
-    /* background-color: fuchsia; */
+    /* background-color: hotpink; */
+    background-color: fuchsia;
     color: floralwhite;
 }
 
@@ -65,8 +63,6 @@ nav:hover{
 }
 
 h1:hover{
-    /* color: hotpink; */
-    /* color: tomato; */
     color: mediumblue;
     cursor: default;
 }
@@ -116,10 +112,83 @@ button:hover{
     color: purple;
 }
 
-#pearl{
-    background-color: whitesmoke;
+#glitter{
+    background-color: silver;
+    color: palevioletred;
+}
+
+#low{
+    background-color: navy;
+    color: silver;
+}
+
+#high{
+    background-color: tomato;
+    color: cornsilk;
+}
+
+#rain{
+    background-color: silver;
+    color: mediumblue;
+}
+
+#fireworks{
+    background-color: hotpink;
+    color: greenyellow;
+}
+
+#know{
+    background-color: lemonchiffon;
+    color: lightcoral;
+}
+
+#where{
+    background-color: lightblue;
+    color: midnightblue;
+}
+
+#summoning{
+    background-color: rebeccapurple;
+    color: antiquewhite;
+}
+
+#spinning{
+    background-color: black;
+    color:mediumslateblue;
+}
+#substance{
+    background-color: azure;
     color: gray;
 }
+#shadows{
+    background-color: slategray;
+    color: darkblue;
+}
+#absence{
+    background-color: steelblue;
+    color: white;
+}
+#fruit{
+    background-color: firebrick;
+    color:lightgreen;
+}
+#saturn{
+    background-color: goldenrod;
+    color: darkslategray;
+}
+#moon{
+    background-color: whitesmoke;
+    color: slategrey;
+}
+#oyster{
+    background-color: lightcoral;
+    color: white;
+}
+#pearl{
+    background-color: white;
+    color: wheat;
+}
+
 
 
 

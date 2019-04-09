@@ -5,29 +5,27 @@ let alter = document.querySelector('.alter');
 let advBtn = document.querySelector('#adv');
 let genBtn = document.querySelector('#gen');
 
-let cloud = document.querySelector('#cloud')
-let leaf = document.getElementById('#leaf');
-
-let path;
-
-// array to store lines of poem during narration
-let poemArray = []
-
-//start the choose-your-own-adventure style poem!
-advBtn.addEventListener('click', () => {
+// functions for DOM with home/about pages
+function aboutNarrative(){
     alter.innerHTML = '';
-    startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
-})
+    let about = document.createElement('div');
+    about.classList.add('about');
+    alter.appendChild(about);
+    let title = document.createElement('h1');
+    title.textContent = aboutHTML.title;
+    let p1 = document.createElement('p');
+    p1.textContent = aboutHTML.p1;
+    let p2 = document.createElement('p');
+    p2.textContent = aboutHTML.p2;
+    about.appendChild(title);
+    about.appendChild(p1);
+    about.appendChild(p2);
+}
 
-
-//generative poem with API
-genBtn.addEventListener('click', () => {
-    alter.innerHTML = 'Coming soon!';
-})
-
-
-//nav button functions
-beginBtn.addEventListener('click', () => {
+function resetHome(){
+    //there isa slight glitch here. if the user clicks 'begin again' and they have a set time out running for create buttons;
+    //the buttons are appended to the dom and so sit below the 'welcome'. maybe creating a button should clear out the dom? or,
+    //if begin again or ? are clicked, the set time out function needs to be cancelled somehow...? idk...
     alter.innerHTML = '';
     let welcome = document.createElement('div');
     welcome.classList.add('welcome');
@@ -59,20 +57,33 @@ beginBtn.addEventListener('click', () => {
         alter.innerHTML = 'Coming soon!';
     })
     emptyPoemArray();
+}
+
+// ===================================== nav button functionality =========================================== //
+
+beginBtn.addEventListener('click', () => {
+    //cancel any setTimeOuts?
+    resetHome();
 })
 
 aboutBtn.addEventListener('click', () => {
-    alter.innerHTML = '';
-    let about = document.createElement('div');
-    about.classList.add('about');
-    alter.appendChild(about);
-    let title = document.createElement('h1');
-    title.textContent = aboutHTML.title;
-    let p1 = document.createElement('p');
-    p1.textContent = aboutHTML.p1;
-    let p2 = document.createElement('p');
-    p2.textContent = aboutHTML.p2;
-    about.appendChild(title);
-    about.appendChild(p1);
-    about.appendChild(p2);
+    //cancel any setTimeOuts?
+    aboutNarrative();
 })
+
+// ======================================= poem functionality! ============================================== //
+
+// array to store lines of poem during narration
+let poemArray = []
+
+//start the choose-your-own-adventure style poem!
+advBtn.addEventListener('click', () => {
+    alter.innerHTML = '';
+    startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
+})
+
+//generative poem with API
+genBtn.addEventListener('click', () => {
+    alter.innerHTML = 'Coming soon!';
+})
+

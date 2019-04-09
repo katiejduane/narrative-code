@@ -30,12 +30,12 @@ let poemData = [
         title: 'night sky',
         keywords: '',
         lines: [
-            'Delicate, threadbare—', 'partial to sky, to black silk that hangs', 'throwing light off its course',
-            'As if rays could be redirected', 'as if summoning actually serves a purpose, does anything.',
-            'Clear through the rings of Saturn', 'a pebble like a moon', 'skirts below, it spins',
+            'delicate, threadbare—', 'partial to sky, to black silk that hangs', 'throwing light off its course',
+            'as if rays could be redirected', 'as if summoning actually serves a purpose, does anything',
+            'clear through the rings of saturn', 'a pebble like a moon skirts below, spinning',
             'conducting matters like ocean waves, and rain', 'I cannot pretend to know anything at all',
             'Even these plates I clear,the silverware I place', 'the linen I fold into near-perfect squares',
-            'Where is any of it?', 'And what is it for?'
+            'where is any of it? and what is it for?'
         ]
     },
     {
@@ -43,10 +43,10 @@ let poemData = [
         keywords: '',
         lines: [ 'The rain  fell yesterday','for the first time in months','the sky was swollen',
             'with orange clouds and everything', 'even the air, every raindrop', 'shimmered with the color of apricots',
-            'a fruit that does not exist here', 'there were fireworks after', 'and I asked him', 
+            'a fruit that does not exist here', 'there were fireworks after, and I asked him', 
             'if they were to celebrate the rain', 'he only laughed', 'as we stood there, briefly connected',
-            'beneath his mango tree', 'that everyday, sends its fruit earthward', 'without there ever being a fret', 
-            'over loss, over absence', 'a long slender branch, carrying one less fruit.'
+            'beneath his mango tree', 'that everyday, sends its fruit earthward', 'without there ever being a fret over loss, over absence',
+            'a long slender branch, carrying one less fruit'
         ]
     },
     {
@@ -87,3 +87,6 @@ let aboutHTML = {
 
 // 2 // choose-your-own-adventure style story creation (!?!?!?!?)
 // use the datamust API for this :D, separate file!
+
+// 3 // recursivePoem
+let poemToRecurse = [];
