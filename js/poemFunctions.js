@@ -61,16 +61,29 @@ function secondLine(choice){
 }
 
 function thirdLine(choice){
+    alter.innerHTML = '';
+    if(choice === 'low'){
+        createLine(air, 5, 'lowLine')
+    }else if(choice === 'high'){
+        createLine(air, 10, 'highline')
+    }
+    setTimeout(() => {
+        createButton('green', 'green', fourthLine)
+        createButton('blue', 'blue', fourthLine)
+    }, 2000);
+}
+
+function fourthLine(choice){
     console.log(choice)
 }
 
-function emptyPoemArray(arr){
-   poemArray = [] 
-}
 
 
-//functions using different array methods for locating lines!
+//functions that print lines to the DOM and make the corresponding buttons!
 function createLine(arr, i, lineClass){
+    //maybe the actual LOOP or METHOD chould go HERE, and not in the function...?? idk, then
+    //it would be easier to create different functions for different kinds of line creation?
+    //think about it...
     let thisLine = arr[i];
     let lineInDOM = document.createElement('div');
     lineInDOM.textContent = thisLine;
@@ -80,11 +93,7 @@ function createLine(arr, i, lineClass){
     console.log(poemArray)
 }
 
-function findSome(arr,i, searchVal){
-    return arr[i] === searchVal;
-}
-
-function createButton(btnName, btnId, callback, cbId){
+function createButton(btnName, btnId, callback){
     let nextButton = document.createElement('button')
     nextButton.setAttribute('id', btnId)
     nextButton.textContent = btnName
@@ -94,10 +103,8 @@ function createButton(btnName, btnId, callback, cbId){
     })
 }
 
-// not sure i'll need/want to ask more questions... we'll see how it goes without
-// function createQuestion(question, questionClass) {
-//     let title = document.createElement('h2');
-//     title.textContent = question;
-//     title.classList.add(questionClass);
-//     alter.appendChild(title);
-// }
+function emptyPoemArray(arr) {
+    poemArray = []
+}
+
+
