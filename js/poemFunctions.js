@@ -156,6 +156,8 @@ function tenthLine(choice, arr){
     setTimeout(() => {
         createButton('scramble poem', 'scramble', scramblePoem, poemArray);
         createButton('read as is', 'read', printPoem, poemArray);
+        // 'save' poem or 'let go' will be passed in as buttons/click functions on the page that
+        // prints either the scrambled poem or the poem as is
     }, 1000);
 }
 
@@ -201,19 +203,22 @@ function getRandom(arr){
 }
 
 function printPoem(arr){
+    console.log(arr)
     //logic to print/read them poem on the screen
 }
 
 function scramblePoem(arr){
-    //logic to 'shuffle' order of array; an option at the end of the user wants!
+    console.log('scrambling')
+    //logic to 'shuffle' order of array; an option at the end of the user wants! then it prints to screen
 }
 
 function savePoem(arr){
+    console.log('save')
     //logic using form data and input type hidden to email the user their poem
 }
 
 function letGo(){
-    
+    resetHome();
 }
 
 function emptyPoemArray(arr) {
