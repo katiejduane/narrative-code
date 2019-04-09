@@ -1,7 +1,7 @@
 // poem declarations:
 let nightSky = poemData[0].lines
 let firstRain = poemData[1].lines
-let air = poemData[1].lines
+let air = poemData[2].lines
 
 
 //click function that asks user questions to create poem 
@@ -25,7 +25,6 @@ function startPoem(question, opt1, opt2, id1, id2) {
 
 
 function firstLine(choice){
-    // console.log(choice)
     alter.innerHTML = '';
     for (let i = 0; i < firstRain.length; i++){
         if(choice === 'cloud'){
@@ -62,10 +61,11 @@ function secondLine(choice){
 
 function thirdLine(choice){
     alter.innerHTML = '';
+    let i = Math.floor((Math.random() * 16) + 1);
     if(choice === 'low'){
-        createLine(air, 5, 'lowLine')
+        createLine(air, i, 'lowLine')
     }else if(choice === 'high'){
-        createLine(air, 10, 'highline')
+        createLine(air, i, 'highline')
     }
     setTimeout(() => {
         createButton('green', 'green', fourthLine)
@@ -83,7 +83,9 @@ function fourthLine(choice){
 function createLine(arr, i, lineClass){
     //maybe the actual LOOP or METHOD chould go HERE, and not in the function...?? idk, then
     //it would be easier to create different functions for different kinds of line creation?
-    //think about it...
+    //think about it... OR, should i re-factor the 'firstLine' 'secondLine' etc to handle incoming arrays
+    //so each is NOT hardcoded? IT WOULD BE SENT DOWN WHEN THE BUTTON IS CREATED AND THE CLICK HANDLER
+    //IS ADDED!!!!!
     let thisLine = arr[i];
     let lineInDOM = document.createElement('div');
     lineInDOM.textContent = thisLine;
@@ -93,13 +95,15 @@ function createLine(arr, i, lineClass){
     console.log(poemArray)
 }
 
-function createButton(btnName, btnId, callback){
+function createButton(btnName, btnId, callback, arr){
+    //WORKING ON MAYBE REFACTORING HOW THE BUTTON IS MADE/EXECUTED FOR PASSING OF ARRAYS
+    //TO ELIMINATE HARD CODING ARRAY NAMES IN EACH LINE FUNCTION! :D
     let nextButton = document.createElement('button')
     nextButton.setAttribute('id', btnId)
     nextButton.textContent = btnName
     alter.appendChild(nextButton);
     nextButton.addEventListener('click', function(){
-        callback(btnId);
+        callback(btnId, arr);
     })
 }
 
