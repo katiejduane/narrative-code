@@ -25,34 +25,8 @@ let poemArray = []
 
 advBtn.addEventListener('click', () => {
     alter.innerHTML = '';
-    askQuestion('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
+    startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
 })
-
-// document.getElementsByClassName('.alter').arrive('cloud'), function(){
-//     console.log('hello')
-// }
-
-var observer = new MutationObserver(subscriber);
-
-function subscriber(mutations) {
-    mutations.forEach((mutation) => {
-        console.log(mutation);
-    });
-}
-
-// var test = function(observer){
-//     console.log('observed');
-// }
-var targetNode = document.querySelector('.alter');
-
-var config = {
-    childList: true
-}
-
-observer.observe(targetNode, config)
-   
-
-
 
 
 //generative poem with API
@@ -88,11 +62,12 @@ beginBtn.addEventListener('click', () => {
     welcome.appendChild(list);
     advBtn.addEventListener('click', () => {
         alter.innerHTML = '';
-        askQuestion('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
+        startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
     })
     genBtn.addEventListener('click', () => {
         alter.innerHTML = 'Coming soon!';
     })
+    emptyPoemArray();
 })
 
 aboutBtn.addEventListener('click', () => {

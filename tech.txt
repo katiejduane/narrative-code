@@ -82,3 +82,43 @@ concept of how narrative(s) should work (pen and paper first, then outline here)
 //exterior/global functions using various array methods or whatnot, passing in
 //params to make them "specific"... but how to chain those various functions
 //together? promises? callbacks would be a mess..async? study the stack and queue more...
+
+
+// document.getElementsByClassName('.alter').arrive('cloud'), function(){
+//     console.log('hello')
+// }
+
+// var observer = new MutationObserver(subscriber);
+
+// function subscriber(mutations) {
+//     mutations.forEach((mutation, i) => {
+//         console.log(mutation.type);
+//         if(mutation.addedNodes[i] == cloud){
+//             document.getElementById('cloud').addEventListener('click', function(){
+//                 firstLine('cloud');
+//                 console.log('hi1')
+//             })
+//             document.getElementById('leaf').addEventListener('click', function () {
+//                 firstLine('leaf');
+//                 console.log('hi2')
+//             })
+//         }
+//     });
+    
+   
+// }
+
+// // var test = function(observer){
+// //     console.log('observed');
+// // }
+// var targetNode = document.querySelector('.alter');
+
+// var config = {
+//     childList: true,
+//     attributes: true,
+//     characterData: true,
+//     subtree: true
+// }
+
+// observer.observe(targetNode, config)
+   
