@@ -217,7 +217,6 @@ function printPoem(choice, arr){
     createButton('let go', 'letGo', letGo, poemArray);
 }
 
-
 function scramblePoem(choice, arr){
     //using the Fisher-Yates algorithm
     console.log('scrambling');
@@ -236,7 +235,20 @@ function scramblePoem(choice, arr){
   
 
 function savePoem(arr){
-    console.log('save')
+    console.log('save');
+    let email;
+    // will need to create the form and embed the poemArray data within it,
+    // include a submit button to email poem to self
+    // let poemForm = document.createElement('form');
+    // poemForm.setAttribute()
+    alter.innerHTML = 'coming soon!'
+    let formIdea = 
+    `<form action="mailto:${email}", method="POST">
+        email: <input type="email" id="email" value=${email}>
+        <input type="hidden" id="savedPoem" value=${arr}>
+        <button type="submit">send</button>
+    </form>`
+
     //logic using form data and input type hidden to email the user their poem
 }
 
@@ -245,7 +257,7 @@ function letGo(){
 }
 
 function emptyPoemArray() {
-    poemArray = []
+    poemArray = [];
 }
 
 //should i make a checkPoem function for all the random line insertions?? idk...
