@@ -204,6 +204,7 @@ function getRandom(arr){
 
 //functions for finishing/printing/scrambling/saving poem!
 function printPoem(choice, arr){
+    alter.innerHTML = ''
     console.log(choice)
     console.log(arr)
     arr.forEach(function(line){
@@ -212,6 +213,8 @@ function printPoem(choice, arr){
         lineOfPoem.textContent = line;
         alter.appendChild(lineOfPoem);
     });
+    createButton('save', 'save', savePoem, poemArray);
+    createButton('let go', 'letGo', letGo, poemArray);
 }
 
 
@@ -241,7 +244,7 @@ function letGo(){
     resetHome();
 }
 
-function emptyPoemArray(arr) {
+function emptyPoemArray() {
     poemArray = []
 }
 
