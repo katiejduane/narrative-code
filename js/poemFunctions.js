@@ -204,9 +204,7 @@ function getRandom(arr){
 
 //functions for finishing/printing/scrambling/saving poem!
 function printPoem(choice, arr){
-    alter.innerHTML = ''
-    console.log(choice)
-    console.log(arr)
+    alter.innerHTML = '';
     arr.forEach(function(line){
         let lineOfPoem = document.createElement('DIV');
         lineOfPoem.classList.add('poem-line');
@@ -218,7 +216,6 @@ function printPoem(choice, arr){
 
 function scramblePoem(choice, arr){
     //using the Fisher-Yates algorithm
-    console.log('scrambling');
     var i = 0
         , j = 0
         , temp = null
