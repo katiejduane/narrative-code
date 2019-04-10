@@ -213,7 +213,6 @@ function printPoem(choice, arr){
         lineOfPoem.textContent = line;
         alter.appendChild(lineOfPoem);
     });
-    createButton('save', 'save', savePoem, poemArray);
     createButton('let go', 'letGo', letGo, poemArray);
 }
 
@@ -233,24 +232,6 @@ function scramblePoem(choice, arr){
     printPoem(choice, arr);
 }
   
-
-function savePoem(arr){
-    console.log('save');
-    let email;
-    // will need to create the form and embed the poemArray data within it,
-    // include a submit button to email poem to self
-    // let poemForm = document.createElement('form');
-    // poemForm.setAttribute()
-    alter.innerHTML = 'coming soon!'
-    let formIdea = 
-    `<form action="mailto:${email}", method="POST">
-        email: <input type="email" id="email" value=${email}>
-        <input type="hidden" id="savedPoem" value=${arr}>
-        <button type="submit">send</button>
-    </form>`
-
-    //logic using form data and input type hidden to email the user their poem
-}
 
 function letGo(){
     resetHome();
