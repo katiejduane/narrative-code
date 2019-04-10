@@ -138,7 +138,6 @@ function ninthLine(choice, arr){
 
 function tenthLine(choice, arr){
     alter.innerHTML = ''
-    console.log(choice)
     let rand1 = getRandom(arr);
     let rand2 = getRandom(arr);
     for(let i = 0; i < poemArray.length; i++){
@@ -173,13 +172,13 @@ function createLine(arr, i, lineClass){
     console.log(poemArray)
 }
 
-function createButton(btnName, btnId, clickFunction, arr){
+function createButton(btnName, btnIdChoice, clickFunction, arr){
     let nextButton = document.createElement('button')
-    nextButton.setAttribute('id', btnId)
+    nextButton.setAttribute('id', btnIdChoice)
     nextButton.textContent = btnName
     alter.appendChild(nextButton);
     nextButton.addEventListener('click', function(){
-        clickFunction(btnId, arr);
+        clickFunction(btnIdChoice, arr);
     })
 }
 
@@ -202,15 +201,36 @@ function getRandom(arr){
     return Math.floor(Math.random() * arr.length);
 }
 
-function printPoem(arr){
+
+//functions for finishing/printing/scrambling/saving poem!
+function printPoem(choice, arr){
+    console.log(choice)
     console.log(arr)
-    //logic to print/read them poem on the screen
+    arr.forEach(function(line){
+        let lineOfPoem = document.createElement('DIV');
+        lineOfPoem.classList.add('poem-line');
+        lineOfPoem.textContent = line;
+        alter.appendChild(lineOfPoem);
+    });
 }
 
-function scramblePoem(arr){
-    console.log('scrambling')
-    //logic to 'shuffle' order of array; an option at the end of the user wants! then it prints to screen
+
+function scramblePoem(choice, arr){
+    //using the Fisher-Yates algorithm
+    console.log('scrambling');
+    var i = 0
+        , j = 0
+        , temp = null
+
+    for (i = arr.length - 1; i > 0; i -= 1) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    printPoem(choice, arr);
 }
+  
 
 function savePoem(arr){
     console.log('save')
