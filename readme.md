@@ -10,7 +10,7 @@ I will likely continue to re-factor and refine the functions. Even in this first
 
 
 # Technologies
-- Vanilla Javascript, CSS, HTML
+- Vanilla Javascript, CSS, HTML, chroma.js
 - [Datamuse API](https://www.datamuse.com/api/) (WIP; this is part two!)
 
 # Challenges & Solutions
@@ -22,6 +22,8 @@ I will likely continue to re-factor and refine the functions. Even in this first
 
 - Challenge: Initial functions were bulky!
     - Solution: I figured out ways to make them more dynamic and re-usable; utilzing the 'choice' generated with each click to search the corresponding array for the line to be printed to the DOM. I was also able to create a singular function for creating two buttons as once, cutting down on the code within each poem function.
+
+    Eventually, I opted to refactor all functions into two: either a choice-based narration function, or a random number-based narration function. This cleaned things up considerably!
 
 - Challenge: 
     - Solution: 

@@ -4,6 +4,7 @@ let aboutBtn = document.querySelector('#about');
 let alter = document.querySelector('.alter');
 let advBtn = document.querySelector('#adv');
 let genBtn = document.querySelector('#gen');
+let recurseBtn = document.querySelector('#recurse');
 
 // functions for DOM with home/about pages
 function aboutNarrative(){
@@ -44,8 +45,13 @@ function resetHome(){
     genBtn.classList.add('choice');
     genBtn.setAttribute('id', 'gen');
     genBtn.textContent = 'generative';
+    let recurseBtn = document.createElement('li');
+    recurseBtn.classList.add('choice');
+    recurseBtn.setAttribute('id', 'recurse');
+    recurseBtn.textContent = 'recursive';
     list.appendChild(advBtn);
     list.appendChild(genBtn);
+    list.appendChild(recurseBtn);
     welcome.appendChild(title);
     welcome.appendChild(p);
     welcome.appendChild(list);
@@ -54,6 +60,9 @@ function resetHome(){
         startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
     })
     genBtn.addEventListener('click', () => {
+        alter.innerHTML = 'Coming soon!';
+    })
+    recurseBtn.addEventListener('click', () => {
         alter.innerHTML = 'Coming soon!';
     })
     emptyPoemArray();
@@ -84,6 +93,11 @@ advBtn.addEventListener('click', () => {
 
 //generative poem with API
 genBtn.addEventListener('click', () => {
+    alter.innerHTML = 'Coming soon!';
+})
+
+//recursive poem
+recurseBtn.addEventListener('click', () => {
     alter.innerHTML = 'Coming soon!';
 })
 

@@ -75,7 +75,7 @@ let homeHTML = {
 let aboutHTML = {
     title: 'what is narrative code?',
     p1: `i really wanted two things: a way to get more creative/expressive with my coding
-        projects, and a way to practice advanced array methods, higher-order functions,
+        projects, and a way to practice array methods, higher-order functions,
         css animations, and more efficient organization and use of data.`,
     p2: `narrative code has two parts: a poem-scrambler, which uses 3 poems written by
         me, plus input from the user, to scramble the poems and create something
