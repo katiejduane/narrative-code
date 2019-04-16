@@ -160,6 +160,30 @@ function tenthLine(choice, arr){
     }, 1000);
 }
 
+//functions to reuse within each line creation
+
+//for creating a line with a choice
+function narrateChoice(arr,choice,lineNum){
+    alter.innerHTML = '';
+    for (let line of arr) {
+        if (line.includes(choice)) {
+            createLine(arr, line, lineNum);
+        }
+    }
+}
+
+//for creating a line with a random number
+function narrateRandom(choice, lineNum){
+    alter.innerHTML = '';
+    let randomNum = getRandom(arr);
+    for (let i = 0; i < poemArray.length; i++) {
+        if (poemArray[i] == arr[randomNum]) {
+            console.log('same')
+            randomNum = getRandom(arr);
+        }
+    }
+    createLine(arr, randomNum, lineNum);
+}
 
 //functions that print lines to the DOM and make the corresponding buttons!
 function createLine(arr, i, lineClass){
@@ -238,8 +262,5 @@ function emptyPoemArray() {
     poemArray = [];
 }
 
-//should i make a checkPoem function for all the random line insertions?? idk...
 
-//consider a recursive option, using a single poem (one longer than the ones used here)
-//and Math.random() to pull the lines with each button click...will require some thinking
-//but you can do it!
+
