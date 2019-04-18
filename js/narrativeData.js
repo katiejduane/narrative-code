@@ -75,7 +75,6 @@ let poemToRecurse = ['someplace else', 'time is solid','someplace else','time is
 'It’s called Jasper, he says', 'most often red, but in this case: blue'];
 
 
-
 // page data
 let homeHTML = {
     title: 'welcome to narrative code',
