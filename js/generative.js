@@ -9,7 +9,7 @@ let generatedPoem = [];
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     let wordChoice = wordInput.value;
-    console.log(wordChoice)
+    generatedPoem.push(wordChoice)
     let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
     axios.get(wordSearchURL)
         .then(function(res) {
@@ -31,7 +31,7 @@ submitButton.addEventListener('click', (event) => {
 
 function printWords(res){
     if (generatedPoem.length === 10) {
-        alter.innerHTML = 'click below to read your poem';
+        alter.innerHTML = '';
         makePrintButton(generatedPoem);
     }else{
         res.data.forEach((word) => {
