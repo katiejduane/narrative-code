@@ -40,6 +40,11 @@ nav:hover{
     cursor: crosshair;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .main-container{
     margin: 3rem 0 0 0;
     width: 100%;

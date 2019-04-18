@@ -39,7 +39,7 @@ function printWords(res){
                 event.preventDefault();
                 let thisWord = event.target.textContent
                 generatedPoem.push(thisWord)
-                getMoreWords(thisWord)
+                addMoreWords(thisWord)
                 console.log(generatedPoem);
             })
             alter.appendChild(wordBtn)
@@ -47,7 +47,7 @@ function printWords(res){
     }
 }
 
-function getMoreWords(word){
+function addMoreWords(word){
     event.preventDefault();
     let wordChoice = word;
     console.log(wordChoice)
@@ -81,40 +81,43 @@ function printPoem(arr){
         alter.appendChild(lineOfPoem);
     });
     arr = []
+    let linkHome = document.createElement('a')
+    linkHome.setAttribute('href', 'index.html')
+    linkHome.textContent = 'home'
+    alter.appendChild(linkHome);
 }
 
 
+// function to print the 'about' section ('begin again' will link back to home)
+let aboutBtn = document.getElementById('about');
+aboutBtn.addEventListener('click', () => {
+    alter.innerHTML = '';
+    let about = document.createElement('div');
+    about.classList.add('about');
+    alter.appendChild(about);
+    let title = document.createElement('h1');
+    title.textContent = aboutHTML.title;
+    let p1 = document.createElement('p');
+    p1.textContent = aboutHTML.p1;
+    let p2 = document.createElement('p');
+    p2.textContent = aboutHTML.p2;
+    about.appendChild(title);
+    about.appendChild(p1);
+    about.appendChild(p2);
+})
 
 
-
-
-// $('#word-form').submit((event) => {
-//     //stops the browser from going forward
-//     console.log('hello')
-//     event.preventDefault();
-//     let wordSearch = $('#search-input').val()
-//     const wordSearchUrl = `${apiBaseUrl}${wordSearch}&max=15`
-//     let newHTML = '';
-//     $.getJSON(wordSearchUrl, (wordInfo) => {
-//         console.log(wordInfo)
-//         if (wordInfo.status == 404) {
-//             newHTML = `<p> Didn't quite get that! </p>`;
-//         }
-//         else{
-//             newHTML += `<div class="results">`
-//             for (let i = 0; i < wordInfo.length; i++){
-//                 if (i < wordInfo.length - 1) {
-//                     newHTML += `<span class="word">${wordInfo[i].word}, </span>`
-//                 } else if (i == wordInfo.length -1) {
-//                     newHTML += `<span class="word">${wordInfo[i].word}</span>`
-//                 }
-//             }
-//             newHTML += `</div>`
-//         }
-//         $('.word-info-box').html(newHTML)
+// function makeWordButton(text, btnClass, type) {
+//     let wordBtn = document.createElement('button')
+//     wordBtn.textContent = text;
+//     wordBtn.classList.add(btn);
+//     wordBtn.type = type;
+//     wordBtn.addEventListener('click', (event) => {
+//         event.preventDefault();
+//         let thisWord = event.target.textContent
+//         generatedPoem.push(thisWord)
+//         addMoreWords(thisWord)
+//         console.log(generatedPoem);
 //     })
-// })
-
-// the result word(s), onClick --> pushes that word (the target) to the poem array,
-// and also calls back out to the API using that word as the paramter (along
-// with whatever other parameters i use for searching)
+//     alter.appendChild(wordBtn)
+// }

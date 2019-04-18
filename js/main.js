@@ -41,16 +41,19 @@ function resetHome(){
     advBtn.classList.add('choice');
     advBtn.setAttribute('id', 'adv')
     advBtn.textContent = 'choose-your-own-adventure';
+    let linkToGen = document.createElement('a')
+    linkToGen.setAttribute('href', 'generative.html')
     let genBtn = document.createElement('li');
     genBtn.classList.add('choice');
     genBtn.setAttribute('id', 'gen');
     genBtn.textContent = 'generative';
+    linkToGen.appendChild(genBtn)
     let recurseBtn = document.createElement('li');
     recurseBtn.classList.add('choice');
     recurseBtn.setAttribute('id', 'recurse');
     recurseBtn.textContent = 'recursive';
     list.appendChild(advBtn);
-    list.appendChild(genBtn);
+    list.appendChild(linkToGen);
     list.appendChild(recurseBtn);
     welcome.appendChild(title);
     welcome.appendChild(p);
@@ -106,11 +109,6 @@ let poemArray = []
 advBtn.addEventListener('click', () => {
     alter.innerHTML = '';
     startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
-})
-
-//generative poem with API
-genBtn.addEventListener('click', () => {
-    alter.innerHTML = 'coming soon!';
 })
 
 //recursive poem start
