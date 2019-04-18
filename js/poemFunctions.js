@@ -227,7 +227,7 @@ function getRandom(arr){
 
 
 //functions for finishing/printing/scrambling/saving poem!
-function printPoem(choice, arr){
+function printPoem(arr){
     alter.innerHTML = '';
     arr.forEach(function(line){
         let lineOfPoem = document.createElement('DIV');
@@ -235,7 +235,7 @@ function printPoem(choice, arr){
         lineOfPoem.textContent = line;
         alter.appendChild(lineOfPoem);
     });
-    createButton('let go', 'letGo', letGo, poemArray);
+    createButton('let go', 'letGo', letGo, arr);
 }
 
 function scramblePoem(choice, arr){

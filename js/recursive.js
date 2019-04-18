@@ -4,6 +4,10 @@ function recursivePoem(arr){
     var recursedPoem = [];
     function helpKatieRecurse(arr){
         if(recursedPoem.length === 11){
+            setTimeout(() => {
+                alter.innerHTML = '';
+                createRecursiveButton('read poem', 'read-rec-poem', printPoem, recursedPoem);
+            }, 1000)
             return;
         }
         alter.innerHTML = '';
