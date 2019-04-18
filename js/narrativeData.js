@@ -1,30 +1,3 @@
-// a collection of phrases, from my work, that the user navigates through...
-// and makes choices about where their 'chance poem' will go next, clicking a button...
-// the buttons will be words that relate to the line(s) they are capable
-// of printing; each button retrieves a new phrase, and triggers another dom event/css animation.
-
-// what kind of functionality will i need? i know i want to pracitce using new/advanced
-// array methods and object functionality. perhaps also recursion? in how it knows to
-// 'keep going' (like maybe: the poem array they create needs to equal 10 lines), using helper
-// function syntax to hold the data outside of the recursive function?
-
-// also: how to load the buttons? because it's all random, there's not 
-// a definite, navigable path of action where i can render buttons from. there will also perhaps
-// need to be an array of buttons, and an array of corresponding functions that both trigger dom events
-// and load lines from poems...
-
-// figure out how to 'save' the poem the user creates and print it to the DOM when they're done, but then it vanishes when they lick "begin again"
-
-// 1 //poemData (maybe start here, without the randomization, this will be easier, but will still let you practice
-// CSS animation and more elegant DOM manipulation!)
-
-// i should use those "chance" collages by various Dada artists as inspiration 
-// for these little jumbled poems...
-
-// should i make declared objects outside of the array, and then put their variable
-// names in an array? idk....
-
-
 let poemData = [
     {
         title: 'night sky',
@@ -94,6 +67,3 @@ let aboutHTML = {
         datamuse API based on user input to create a list-type poem. last, you can create a
         randomized poem by way of recursion. i hope you enjoy them!`
 }
-
-
-
