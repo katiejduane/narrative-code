@@ -6,27 +6,32 @@ let alter = document.querySelector('.alter');
 
 let generatedPoem = [];
 
-//dataMuse API model to look at later when creating the 'random/generative' version of this; each click
-//makes an API call based on their initial form input to create a very simple 10 line poem! :)
-
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     let wordChoice = wordInput.value;
     console.log(wordChoice)
     let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
-    alter.innerHTML = '';
     axios.get(wordSearchURL)
-        .then(function (res) {
-            printWords(res)
+        .then(function(res) {
+            if (res.data.length === 0) {
+                alter.insertAdjacentHTML('beforeend', "we're not sure that word exists!")
+            }else{
+                alter.innerHTML = '';
+                printWords(res)
+            }
         })
-        .catch(function () {
-            console.log('error!')
+        .catch(function(err) {
+            if(res.status != 200){
+                alter.insertAdjacentHTML('afterbegin', "oops! there was an error. try again!")
+            }else{
+                console.log(err)
+            }
         })
 })
 
 function printWords(res){
     if (generatedPoem.length === 10) {
-        alter.innerHTML = 'your poem is finished! soon i will add a button so you can read it!';
+        alter.innerHTML = 'click below to read your poem';
         makePrintButton(generatedPoem);
     }else{
         res.data.forEach((word) => {
