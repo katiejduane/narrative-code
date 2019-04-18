@@ -25,21 +25,26 @@ submitButton.addEventListener('click', (event) => {
 })
 
 function printWords(res){
-    res.data.forEach((word)=>{
-        console.log(word.word)
-        let wordBtn = document.createElement('button')
-        wordBtn.textContent = word.word;
-        wordBtn.classList.add('word-result');
-        wordBtn.type = 'submit';
-        wordBtn.addEventListener('click', (event)=>{
-            event.preventDefault();
-            let thisWord = event.target.textContent
-            generatedPoem.push(thisWord)
-            getMoreWords(thisWord)
-            console.log(generatedPoem);
+    if (generatedPoem.length === 10) {
+        alter.innerHTML = 'your poem is finished! soon i will add a button so you can read it!';
+        makePrintButton(generatedPoem);
+    }else{
+        res.data.forEach((word) => {
+            console.log(word.word)
+            let wordBtn = document.createElement('button')
+            wordBtn.textContent = word.word;
+            wordBtn.classList.add('word-result');
+            wordBtn.type = 'submit';
+            wordBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                let thisWord = event.target.textContent
+                generatedPoem.push(thisWord)
+                getMoreWords(thisWord)
+                console.log(generatedPoem);
+            })
+            alter.appendChild(wordBtn)
         })
-        alter.appendChild(wordBtn)
-    })
+    }
 }
 
 function getMoreWords(word){
@@ -55,11 +60,28 @@ function getMoreWords(word){
         .catch(function () {
             console.log('error!')
         })
-    if (generatedPoem.length === 10) {
-        return generatedPoem;
-    }
 }
 
+function makePrintButton(arr){
+    let printGenPoem = document.createElement('button');
+    printGenPoem.textContent = 'read poem';
+    printGenPoem.setAttribute('id', 'print-gen-btn');
+    alter.appendChild(printGenPoem);
+    printGenPoem.addEventListener('click', () => {
+        printPoem(arr)
+    })
+}
+
+function printPoem(arr){
+    alter.innerHTML = '';
+    arr.forEach(function (line) {
+        let lineOfPoem = document.createElement('div');
+        lineOfPoem.classList.add('gen-poem-line');
+        lineOfPoem.textContent = line;
+        alter.appendChild(lineOfPoem);
+    });
+    arr = []
+}
 
 
 
