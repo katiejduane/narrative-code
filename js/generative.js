@@ -57,8 +57,8 @@ function addMoreWords(word){
         .then(function (res) {
             printWords(res)
         })
-        .catch(function () {
-            console.log('error!')
+        .catch(function(err) {
+            console.log(err)
         })
 }
 
@@ -105,19 +105,3 @@ aboutBtn.addEventListener('click', () => {
     about.appendChild(p1);
     about.appendChild(p2);
 })
-
-
-// function makeWordButton(text, btnClass, type) {
-//     let wordBtn = document.createElement('button')
-//     wordBtn.textContent = text;
-//     wordBtn.classList.add(btn);
-//     wordBtn.type = type;
-//     wordBtn.addEventListener('click', (event) => {
-//         event.preventDefault();
-//         let thisWord = event.target.textContent
-//         generatedPoem.push(thisWord)
-//         addMoreWords(thisWord)
-//         console.log(generatedPoem);
-//     })
-//     alter.appendChild(wordBtn)
-// }
