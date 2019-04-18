@@ -84,6 +84,7 @@ function startRecurse(){
     })
 }
 
+
 // ===================================== nav button functionality =========================================== //
 
 beginBtn.addEventListener('click', () => {
@@ -109,7 +110,7 @@ advBtn.addEventListener('click', () => {
 
 //generative poem with API
 genBtn.addEventListener('click', () => {
-    alter.innerHTML = 'Coming soon!';
+    alter.innerHTML = 'coming soon!';
 })
 
 //recursive poem start

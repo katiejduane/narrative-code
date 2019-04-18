@@ -1,10 +1,70 @@
 // for random/generative narrative creation 
+const apiBaseUrl = `https://api.datamuse.com/words?rel_trg=`
+let wordInput = document.getElementById('word-input');
+const submitButton = document.getElementById('submit-btn');
+let alter = document.querySelector('.alter');
+
+let generatedPoem = [];
 
 //dataMuse API model to look at later when creating the 'random/generative' version of this; each click
 //makes an API call based on their initial form input to create a very simple 10 line poem! :)
 
-// my old code below is only for starting... it will get... a lot more complicated, and will be built out
-// slightly differently in order to 'create' (and briefly 'save') a poem. 
+submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    let wordChoice = wordInput.value;
+    console.log(wordChoice)
+    let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
+    alter.innerHTML = '';
+    axios.get(wordSearchURL)
+        .then(function (res) {
+            printWords(res)
+        })
+        .catch(function () {
+            console.log('error!')
+        })
+})
+
+function printWords(res){
+    res.data.forEach((word)=>{
+        console.log(word.word)
+        let wordBtn = document.createElement('button')
+        wordBtn.textContent = word.word;
+        wordBtn.classList.add('word-result');
+        wordBtn.type = 'submit';
+        wordBtn.addEventListener('click', (event)=>{
+            event.preventDefault();
+            let thisWord = event.target.textContent
+            generatedPoem.push(thisWord)
+            getMoreWords(thisWord)
+            console.log(generatedPoem);
+        })
+        alter.appendChild(wordBtn)
+    })
+}
+
+function getMoreWords(word){
+    event.preventDefault();
+    let wordChoice = word;
+    console.log(wordChoice)
+    let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
+    alter.innerHTML = '';
+    axios.get(wordSearchURL)
+        .then(function (res) {
+            printWords(res)
+        })
+        .catch(function () {
+            console.log('error!')
+        })
+    if (generatedPoem.length === 10) {
+        return generatedPoem;
+    }
+}
+
+
+
+
+
+
 
 // $('#word-form').submit((event) => {
 //     //stops the browser from going forward
