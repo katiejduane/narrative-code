@@ -2,7 +2,7 @@
 let beginBtn = document.querySelector('#begin');
 let aboutBtn = document.querySelector('#about');
 let alter = document.querySelector('.alter');
-let advBtn = document.querySelector('#adv');
+let altBtn = document.querySelector('#alt');
 let genBtn = document.querySelector('#gen');
 let recurseBtn = document.querySelector('#recurse');
 
@@ -37,10 +37,10 @@ function resetHome(){
     p.textContent = homeHTML.p1;
     let list = document.createElement('ol');
     list.classList.add('menu');
-    let advBtn = document.createElement('li');
-    advBtn.classList.add('choice');
-    advBtn.setAttribute('id', 'adv')
-    advBtn.textContent = 'choose-your-own-adventure';
+    let altBtn = document.createElement('li');
+    altBtn.classList.add('choice');
+    altBtn.setAttribute('id', 'alt')
+    altBtn.textContent = 'alternative';
     let linkToGen = document.createElement('a')
     linkToGen.setAttribute('href', 'generative.html')
     let genBtn = document.createElement('li');
@@ -52,13 +52,13 @@ function resetHome(){
     recurseBtn.classList.add('choice');
     recurseBtn.setAttribute('id', 'recurse');
     recurseBtn.textContent = 'recursive';
-    list.appendChild(advBtn);
+    list.appendChild(altBtn);
     list.appendChild(linkToGen);
     list.appendChild(recurseBtn);
     welcome.appendChild(title);
     welcome.appendChild(p);
     welcome.appendChild(list);
-    advBtn.addEventListener('click', () => {
+    altBtn.addEventListener('click', () => {
         alter.innerHTML = '';
         startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
     })
@@ -105,8 +105,8 @@ aboutBtn.addEventListener('click', () => {
 // array to store lines of poem during narration
 let poemArray = []
 
-//start the choose-your-own-adventure style poem!
-advBtn.addEventListener('click', () => {
+//start the choose-your-own-altenture style poem!
+altBtn.addEventListener('click', () => {
     alter.innerHTML = '';
     startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
 })
