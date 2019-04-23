@@ -60,10 +60,7 @@ function resetHome(){
     welcome.appendChild(list);
     altBtn.addEventListener('click', () => {
         alter.innerHTML = '';
-        startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
-    })
-    genBtn.addEventListener('click', () => {
-        alter.innerHTML = 'Coming soon!';
+        startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'tree');
     })
     recurseBtn.addEventListener('click', () => {
         alter.innerHTML = '';
@@ -108,7 +105,7 @@ let poemArray = []
 //start the choose-your-own-altenture style poem!
 altBtn.addEventListener('click', () => {
     alter.innerHTML = '';
-    startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'leaf');
+    startPoem('would you rather be...', 'a cloud', 'a leaf', 'cloud', 'tree');
 })
 
 //recursive poem start

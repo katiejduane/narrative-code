@@ -107,17 +107,17 @@ button:hover{
    color: whitesmoke; 
 }
 
-#leaf{
+#tree{
     background-color: greenyellow;
     color: darkmagenta;
 }
 
-#gold{
+#silk{
     background-color: goldenrod;
     color: purple;
 }
 
-#glitter{
+#waves{
     background-color: silver;
     color: palevioletred;
 }
@@ -132,7 +132,7 @@ button:hover{
     color: cornsilk;
 }
 
-#rain{
+#raindrop{
     background-color: silver;
     color: mediumblue;
 }
@@ -173,7 +173,7 @@ button:hover{
     background-color: steelblue;
     color: white;
 }
-#fruit{
+#slender{
     background-color: firebrick;
     color:lightgreen;
 }
@@ -190,8 +190,20 @@ button:hover{
     color: white;
 }
 #pearl{
-    background-color: white;
-    color: wheat;
+    background-color: wheat;
+    color: white;
+}
+#scramble{
+    background-color: orchid;
+    color: blue;
+}
+#read{
+    background-color: ghostwhite;
+    color: goldenrod;
+}
+#letGo{
+    background-color: blanchedalmond;
+    color: gray;
 }
 
 

@@ -19,38 +19,21 @@ function startPoem(question, opt1, opt2, id1, id2) {
         firstLine(id1);
     })
     btn2.addEventListener('click', () => {
+        console.log(id2)
         firstLine(id2);
     })
 }
 
 function firstLine(choice){
-    alter.innerHTML = '';
-    for (let i = 0; i < firstRain.length; i++){
-        if(choice === 'cloud'){
-            if (firstRain[i].includes('clouds')) {
-                createLine(firstRain, i, 'cloudLine');
-            }
-        }else if(choice === 'leaf'){
-            if (firstRain[i].includes('tree')) {
-                createLine(firstRain, i, 'leafLine');
-            }
-        } 
-    }
+    narrateChoice(firstRain, choice, "lineOne")
     setTimeout(() => {
-        createButton('glitter', 'glitter', secondLine);
-        createButton('gold', 'gold', secondLine);
+        createButton('silk', 'silk', secondLine);
+        createButton('waves', 'waves', secondLine);
     }, 1000);
 }
 
 function secondLine(choice){
-    alter.innerHTML = '';
-    nightSky.forEach(function(line, i){
-        if(choice === 'glitter' && line.includes('silk')){
-            createLine(nightSky, i, 'glitterLine');
-        }else if(choice ==='gold' && line.includes('waves')){
-            createLine(nightSky, i, 'goldLine');
-        }    
-    });
+    narrateChoice(nightSky, choice, "lineTwo")
     setTimeout(() => {
         createButton('low tide', 'low', thirdLine);
         createButton('high tide', 'high', thirdLine);
@@ -58,105 +41,66 @@ function secondLine(choice){
 }
 
 function thirdLine(choice){
-    alter.innerHTML = '';
-    let i = Math.floor((Math.random() * 16) + 1);
-    if(choice === 'low'){
-        createLine(air, i, 'lowLine');
-    }else if(choice === 'high'){
-        createLine(air, i, 'highline');
-    }
+    narrateRandom(air, choice, 'lineThree')
     setTimeout(() => {
-        createButton('raindrop', 'raindrop', fourthLine, firstRain);
-        createButton('fireworks', 'fireworks', fourthLine, firstRain);
+        createButton('raindrop', 'raindrop', fourthLine);
+        createButton('fireworks', 'fireworks', fourthLine);
     }, 1000);
 }
 
-function fourthLine(choice, arr){
-    alter.innerHTML = '';
-    for(let line in arr){
-        if (arr[line].includes(choice)){
-            console.log(line)
-            createLine(arr, line, 'fourthLine');
-        }
-    }
+function fourthLine(choice){
+    narrateChoice(firstRain, choice, "lineFour")
     setTimeout(() => {
-        createButton('know', 'know', fifthLine, nightSky);
-        createButton('where', 'where', fifthLine, nightSky);
+        createButton('know', 'know', fifthLine);
+        createButton('where', 'where', fifthLine);
     }, 1000);
 }
 
-function fifthLine(choice, arr){
-    alter.innerHTML = '';
-    for (let line of arr) {
-        if (line.includes(choice)) {
-            createLine(arr, line, 'fifthLine');
-        }
-    }
+function fifthLine(choice){
+    narrateChoice(nightSky, choice, "lineFive")
     setTimeout(() => {
-        createButton('summoning', 'summoning', sixthLine, nightSky);
-        createButton('spinning', 'spinning', sixthLine, nightSky);
+        createButton('summoning', 'summoning', sixthLine);
+        createButton('spinning', 'spinning', sixthLine);
     }, 1000);
 }
 
-function sixthLine(choice, arr){
-    alter.innerHTML = '';
-    arr.find((line)=>{
-        if (line.includes(choice)) {
-            createLine(arr, line, 'sixthLine');
-            console.log('sixth')
-        }
-    })
+function sixthLine(choice){
+    narrateChoice(nightSky, choice, "lineSix")
     setTimeout(() => {
-        createButton('substance', 'substance', seventhLine, air);
-        createButton('shadows', 'shadows', seventhLine, air);
+        createButton('substance', 'substance', seventhLine);
+        createButton('shadows', 'shadows', seventhLine);
     }, 1000);
 }
 
-function seventhLine(choice, arr){
-    alter.innerHTML = '';
-    for(let i = 0; i < 100; i++){
-        var random = Math.floor(Math.random() * arr.length);
-    }
-    createLine(arr, random, 'seventhLine');
+function seventhLine(choice){
+    narrateRandom(air, choice, 'lineSeven')
     setTimeout(() => {
-        createButton('absence', 'absence', eighthLine, firstRain);
-        createButton('fruit', 'slender', eighthLine, firstRain);
+        createButton('absence', 'absence', eighthLine);
+        createButton('fruit', 'slender', eighthLine);
     }, 1000);
 }
 
-function eighthLine(choice, arr){
-    alter.innerHTML = ''
-    findChoice(arr, choice, 'eighthLine');
-    createButtons('saturn', 'saturn', 'moon', 'moon', ninthLine, nightSky);
-}
-
-function ninthLine(choice, arr){
-    alter.innerHTML = ''
-    findChoice(arr, choice, 'ninthLine');
-    createButtons('oyster', 'oyster', 'pearl', 'pearl', tenthLine, air);
-}
-
-function tenthLine(choice, arr){
-    alter.innerHTML = ''
-    let rand1 = getRandom(arr);
-    let rand2 = getRandom(arr);
-    for(let i = 0; i < poemArray.length; i++){
-        if(poemArray[i] == arr[rand1] || poemArray[i] == arr[rand2]){
-            console.log('same')
-            rand1 = getRandom(arr);
-            rand2 = getRandom(arr)
-        }
-    }
-    if(choice == 'oyster'){
-        createLine(arr, rand1, 'tenthLine');
-    }else if(choice == 'pearl'){
-        createLine(arr, rand2, 'tenthLine');
-    }
+function eighthLine(choice){
+    narrateChoice(firstRain, choice, 'lineEight')
     setTimeout(() => {
-        createButton('scramble poem', 'scramble', scramblePoem, poemArray);
-        createButton('read as is', 'read', printPoem, poemArray);
-        // 'save' poem or 'let go' will be passed in as buttons/click functions on the page that
-        // prints either the scrambled poem or the poem as is
+        createButton('saturn', 'saturn', ninthLine);
+        createButton('moon', 'moon', ninthLine);
+    }, 1000);
+}
+
+function ninthLine(choice){
+    narrateChoice(nightSky, choice, "lineNine")
+    setTimeout(() => {
+        createButton('oyster', 'oyster', tenthLine);
+        createButton('pearl', 'pearl', tenthLine);
+    }, 1000);
+}
+
+function tenthLine(choice){
+    narrateRandom(air, choice, 'lineTen')
+    setTimeout(() => {
+        createButton('scramble poem', 'scramble', scramblePoem);
+        createButton('read as is', 'read', printPoem);
     }, 1000);
 }
 
@@ -173,12 +117,11 @@ function narrateChoice(arr,choice,lineNum){
 }
 
 //for creating a line with a random number
-function narrateRandom(choice, lineNum){
+function narrateRandom(arr, choice, lineNum){
     alter.innerHTML = '';
     let randomNum = getRandom(arr);
     for (let i = 0; i < poemArray.length; i++) {
         if (poemArray[i] == arr[randomNum]) {
-            console.log('same')
             randomNum = getRandom(arr);
         }
     }
@@ -196,61 +139,46 @@ function createLine(arr, i, lineClass){
     console.log(poemArray)
 }
 
-function createButton(btnName, btnIdChoice, clickFunction, arr){
+function createButton(btnName, btnIdChoice, clickFunction){
     let nextButton = document.createElement('button')
     nextButton.setAttribute('id', btnIdChoice)
     nextButton.textContent = btnName
     alter.appendChild(nextButton);
     nextButton.addEventListener('click', function(){
-        clickFunction(btnIdChoice, arr);
+        clickFunction(btnIdChoice);
     })
 }
 
-function createButtons(btnName1, btnId1, btnName2, btnId2, clickFunction, arr) {
-    setTimeout(() => {
-        createButton(btnName1, btnId1, clickFunction, arr);
-        createButton(btnName2, btnId2, clickFunction, arr);
-    }, 1000);
-}
-
-function findChoice(arr, choice, lineNum){
-    for (let line in arr) {
-        if (arr[line].includes(choice)) {
-            createLine(arr, line, lineNum);
-        }
-    }
-}
-
+// function to get random num for randomized line generation
 function getRandom(arr){
     return Math.floor(Math.random() * arr.length);
 }
 
-
 //functions for finishing/printing/scrambling/saving poem!
-function printPoem(arr){
+function printPoem(){
     alter.innerHTML = '';
-    arr.forEach(function(line){
+    poemArray.forEach(function(line){
         let lineOfPoem = document.createElement('DIV');
         lineOfPoem.classList.add('poem-line');
         lineOfPoem.textContent = line;
         alter.appendChild(lineOfPoem);
     });
-    createButton('let go', 'letGo', letGo, arr);
+    createButton('let go', 'letGo', letGo, poemArray);
 }
 
-function scramblePoem(choice, arr){
+function scramblePoem(){
     //using the Fisher-Yates algorithm
     var i = 0
         , j = 0
         , temp = null
 
-    for (i = arr.length - 1; i > 0; i -= 1) {
+    for (i = poemArray.length - 1; i > 0; i -= 1) {
         j = Math.floor(Math.random() * (i + 1));
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        temp = poemArray[i];
+        poemArray[i] = poemArray[j];
+        poemArray[j] = temp;
     }
-    printPoem(choice, arr);
+    printPoem();
 }
   
 
@@ -261,5 +189,4 @@ function letGo(){
 function emptyPoemArray() {
     poemArray = [];
 }
-
 

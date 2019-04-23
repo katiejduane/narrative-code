@@ -39,7 +39,7 @@ let poemData = [
 // rescursive data
 let poemToRecurse = ['someplace else', 'time is solid','someplace else','time is something you can touch', 'can pick up and take with you', 
 'so it is also something you can break', 'something you can crack', 'in half and look inside of', 'what color would time be', 'if it were a thing?',
-'if it were a like a stone', 'that could be broken in two', 'I think: it would break easily', 'I think: it would be blue', 'imagine: time as a stone',
+'if it were like a stone', 'that could be broken in two', 'I think: it would break easily', 'I think: it would be blue', 'imagine: time as a stone',
 'you could slip inside your pocket and carry', 'imagine: time as a stone ground down', 'like sand, like the sand', 'at the edge of a continent',
 'the sand that the sea sinks into', 'vanishing with a sigh', 'with relief', 'after travelingall those miles', 'imagine: time ground even finer:',
 'like dust, it would settle and then drift','floating in and out of the sunlight', 'becoming and unbecoming without end', 'here: I am always so busy fighting with time', 
@@ -63,7 +63,7 @@ let aboutHTML = {
         css animations, and more efficient organization and use of data.`,
     p2: `narrative code has three parts: a poem-scrambler, which uses 3 poems written by
         me, plus input from the user, to scramble the poems and create something
-        entirely new. there's also a generative poem (coming soon) which reaches out to the
-        datamuse API based on user input to create a list-type poem. last, you can create a
+        entirely new. there's also a generative poem which reaches out to the
+        Datamuse API (with user input) to create a list-type poem. last, you can create a
         randomized poem by way of recursion. i hope you enjoy them!`
 }
