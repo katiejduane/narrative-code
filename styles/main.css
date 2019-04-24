@@ -26,7 +26,6 @@ nav:hover{
     position: absolute;
     list-style: none;
     right: 1rem;
-
 }
 
 .option{
@@ -40,9 +39,13 @@ nav:hover{
     cursor: crosshair;
 }
 
-a {
+a{
     text-decoration: none;
     color: black;
+}
+
+a:hover{
+    cursor: crosshair;
 }
 
 .main-container{
@@ -60,11 +63,16 @@ a {
     width: auto;
     height: auto;
     font-family: 'Courier New', Courier, monospace;
+    /* border: 2px dotted black; */
+    
 }
 
 .about{
-    
     width: 60vw;
+}
+
+.welcome{
+    margin: 0 auto;
 }
 
 h1:hover{
@@ -99,65 +107,56 @@ button:hover{
     text-decoration: underline;
     outline: none;
     border: none;
+    cursor: crosshair;
 }
 
-/* various button colors: */
+/* ------------------------ various button colors: ------------------------- */
+
 #cloud{
    background-color: skyblue;
    color: whitesmoke; 
 }
-
 #tree{
     background-color: greenyellow;
     color: darkmagenta;
 }
-
 #silk{
     background-color: goldenrod;
     color: purple;
 }
-
 #waves{
     background-color: silver;
     color: palevioletred;
 }
-
 #low{
     background-color: navy;
     color: silver;
 }
-
 #high{
     background-color: tomato;
     color: cornsilk;
 }
-
 #raindrop{
     background-color: silver;
     color: mediumblue;
 }
-
 #fireworks{
     background-color: hotpink;
     color: greenyellow;
 }
-
 #know{
     background-color: lemonchiffon;
     color: lightcoral;
 }
-
 #where{
     background-color: lightblue;
     color: midnightblue;
 }
-
-#summoning{
+#heaps{
     background-color: rebeccapurple;
     color: antiquewhite;
 }
-
-#spinning{
+#rays{
     background-color: black;
     color:mediumslateblue;
 }
