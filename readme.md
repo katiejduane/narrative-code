@@ -25,8 +25,8 @@ Functions, intially, were all different so I could practice different array meth
 
     Eventually, I opted to refactor all functions into two: either a choice-based narration function, or a random number-based narration function. This cleaned things up considerably!
 
-- Challenge: 
-    - Solution: 
+- Challenge: I wanted to practice recursion!
+    - Solution: I made a third poem option, a recursive poem generator.
 
 
 # Goals
