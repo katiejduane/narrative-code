@@ -10,12 +10,16 @@ The 'lines' of each poem (there are four in use for this project) are written by
 
 Functions, intially, were all different so I could practice different array methods, but were later refactored into two functions that were used as needed with different data passed in. 
 
+![narrative image](screenshots/screen-gen.png)
 
 # Technologies
 - Vanilla Javascript, CSS, HTML
 - [Datamuse API](https://www.datamuse.com/api/)
 
 # Challenges & Solutions
+
+![narrative image](screenshots/screen-choice.png)
+
 - Challenge: When a line of a poem is printed to the DOM, two buttons come along with it. Those buttons create the NEXT line of the poem. But! I quickly realized I couldn't add a click function to a DOM element that didn't exist yet.
     - Solution: I tried if(element), but once the program ran, it didn't run again to re-check if the element existed later. I considered writing one parent function that contained all of the consecutive functions, but it grew exponentially, and this seemed like a bad and hard-to-manage solution. I looked into using Mutation Observers, but the syntax was too bulky and complex for such a (seemingly!) simple program. 
         - Finally, I came up with a way to pass down the necessary variables and click handlers from one function to another. When a new line of the poem is generated, the buttons that follow recieve their own data (like name and id) and also the array, user choice, and click function they will run. 
@@ -31,6 +35,9 @@ Functions, intially, were all different so I could practice different array meth
     - Solution: I made a third poem option, a recursive poem generator.
 
 
+![narrative image](screenshots/screen-rec.png)
+
+
 # Goals
 - To improve my understanding and skill using various array methods and functions
 - A choice-based narrative experience for the user where they 'create' a poem
@@ -41,6 +48,9 @@ Functions, intially, were all different so I could practice different array meth
 - Make the main poem generating function (ie the 'alternative' poem) recursive.
 - Option to save (email via form) poem and/or 'scramble' the poem upon finishing.
 
-* I am working on the stretch goals currently, and my guess is I'll chip away at them slowly, when I have bits of free time! 
+# I am working on the stretch goals currently, and my guess is I'll chip away at them slowly, when I have bits of free time! #
+ 
+ ![narrative image](screenshots/screen-final2.png)
+
 
 
