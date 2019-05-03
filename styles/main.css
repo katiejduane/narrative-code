@@ -16,7 +16,6 @@ nav{
 }
 
 nav:hover{
-    /* background-color: hotpink; */
     background-color: fuchsia;
     color: floralwhite;
 }
@@ -62,8 +61,12 @@ a:hover{
     padding: 2rem;
     width: auto;
     height: auto;
+    min-height: 10rem;
     font-family: 'Courier New', Courier, monospace;
-    /* border: 2px dotted black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     
 }
 
@@ -72,7 +75,7 @@ a:hover{
 }
 
 .welcome{
-    margin: 0 auto;
+    width: auto;
 }
 
 h1:hover{
@@ -100,6 +103,7 @@ button{
     font-size: 12pt;
     outline: none;
     border: none;
+    transition: filter 1s;
 }
 
 button:hover{
@@ -108,14 +112,16 @@ button:hover{
     outline: none;
     border: none;
     cursor: crosshair;
+
 }
 
 /* ------------------------ various button colors: ------------------------- */
 
 #cloud{
-   background-color: skyblue;
-   color: whitesmoke; 
+    background-color: skyblue;
+    color: whitesmoke; 
 }
+    
 #tree{
     background-color: greenyellow;
     color: darkmagenta;
@@ -204,6 +210,95 @@ button:hover{
     background-color: blanchedalmond;
     color: gray;
 }
+
+
+
+/* ------------------------------ a few fixed things -------------------------------*/
+
+/* main poem function */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.alt-line{
+    opacity: 0;
+}
+
+.alt-line:hover{
+    filter: invert(1)
+}
+
+/* generative poem */
+#submit-btn{
+    background-color: tomato;
+    color: black;
+}
+
+.word-result{
+    background-color: plum;
+    color: black;
+}
+
+#print-gen-btn{
+    background-color: aquamarine;
+    color: black;
+}
+
+.home-btn{
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    transition: filter 1s;
+}
+
+.home-btn:hover{
+    filter: invert(1);
+}
+
+/* recursive */
+#start-rec{
+    background-color: gold;
+}
+
+.recursive-line{
+    padding: 0.5rem;
+
+}
+
+.recursive-line:hover{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: hotpink;
+    opacity: 0;
+}
+
+#next{
+    background-color: turquoise;
+    opacity: 0;
+}
+
+#read-rec-poem{
+    background-color: mediumspringgreen;
+    color: pink;
+}
+
+/* screen */
+.screen{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: floralwhite;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: -1;
+}
+
+
+
 
 
 

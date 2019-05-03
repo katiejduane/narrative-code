@@ -8,91 +8,100 @@ let air = poemData[2].lines
 function startPoem(question, opt1, opt2, id1, id2) {
     let title = document.createElement('h2');
     title.textContent = question;
+    let btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
     let btn1 = document.createElement('button');
     btn1.textContent = opt1;
     btn1.setAttribute('id', id1);
     let btn2 = document.createElement('button');
     btn2.textContent = opt2;
     btn2.setAttribute('id', id2);
-    alter.append(title, btn1, btn2);
+    btnContainer.append(btn1, btn2);
+    alter.append(title, btnContainer);
     btn1.addEventListener('click', () => {
-        firstLine(id1);
+        whiteWash();
+        setTimeout(()=>{
+            firstLine(id1);
+        },1000)
+        
     })
     btn2.addEventListener('click', () => {
-        console.log(id2)
-        firstLine(id2);
+        whiteWash();
+        setTimeout(() => {
+            firstLine(id2);
+        }, 1000)
     })
 }
 
 function firstLine(choice){
-    narrateChoice(firstRain, choice, "lineOne")
+    narrateChoice(firstRain, choice)
     setTimeout(() => {
         createButtons('silk', 'silk', 'waves', 'waves', secondLine)
     }, 1000);
 }
 
 function secondLine(choice){
-    narrateChoice(nightSky, choice, "lineTwo")
+    narrateChoice(nightSky, choice)
     setTimeout(() => {
         createButtons('low tide', 'low', 'high tide', 'high', thirdLine);
     }, 1000);
 }
 
 function thirdLine(choice){
-    narrateRandom(air, choice, 'lineThree')
+    narrateRandom(air, choice)
     setTimeout(() => {
         createButtons('raindrop', 'raindrop', 'fireworks', 'fireworks', fourthLine);
     }, 1000);
 }
 
 function fourthLine(choice){
-    narrateChoice(firstRain, choice, "lineFour")
+    narrateChoice(firstRain, choice)
     setTimeout(() => {
         createButtons('know', 'know', 'where', 'where', fifthLine);
     }, 1000);
 }
 
 function fifthLine(choice){
-    narrateChoice(nightSky, choice, "lineFive")
+    narrateChoice(nightSky, choice)
     setTimeout(() => {
         createButtons('saturn', 'saturn', 'moon', 'moon', sixthLine);
     }, 1000);
 }
 
 function sixthLine(choice){
-    narrateChoice(nightSky, choice, "lineSix")
+    narrateChoice(nightSky, choice)
     setTimeout(() => {
         createButtons('substance', 'substance', 'shadows', 'shadows', seventhLine);
     }, 1000);
 }
 
 function seventhLine(choice){
-    narrateRandom(air, choice, 'lineSeven')
+    narrateRandom(air, choice)
     setTimeout(() => {
         createButtons('absence', 'absence', 'fruit', 'slender', eighthLine);
     }, 1000);
 }
 
 function eighthLine(choice){
-    narrateRandom(firstRain, choice, 'lineEight')
+    narrateRandom(firstRain, choice)
     setTimeout(() => {
         createButtons('rays', 'rays', 'heaps', 'heaps', ninthLine);
     }, 1000);
 }
 
 function ninthLine(choice){
-    narrateRandom(nightSky, choice, "lineNine")
+    narrateRandom(nightSky, choice)
     setTimeout(() => {
         createButtons('oyster', 'oyster', 'pearl', 'pearl', tenthLine);
     }, 1000);
 }
 
 function tenthLine(choice){
-    narrateRandom(air, choice, 'lineTen')
+    narrateRandom(air, choice)
     setTimeout(() => {
         createFinalButton('scramble poem', 'scramble', scramblePoem);
         createFinalButton('read as is', 'read', printPoem);
-    }, 1000);
+    }, 2000);
 }
 
 //functions to reuse within each line creation
@@ -120,44 +129,56 @@ function narrateRandom(arr, choice, lineNum){
 }
 
 //functions that print lines to the DOM and make the corresponding buttons!
-function createLine(arr, i, lineClass){
+function createLine(arr, i){
     let thisLine = arr[i] || i;
-    let lineInDOM = document.createElement('div');
+    let lineInDOM = document.createElement('p');
     lineInDOM.textContent = thisLine;
-    lineInDOM.classList.add(lineClass);
+    lineInDOM.classList.add("alt-line");
     alter.appendChild(lineInDOM);
+    fadeIn(lineInDOM, 1300)
     poemArray.push(thisLine);
     console.log(poemArray)
 }
 
 function createButtons(btn1Name, btn1IdChoice, btn2Name, btn2IdChoice, clickFunction){
-    let buttonContainer = document.createElement('div')
-    buttonContainer.classList.add('button-container')
-    alter.appendChild(buttonContainer)
-    let nextBtn1 = document.createElement('button')
-    nextBtn1.setAttribute('id', btn1IdChoice)
-    nextBtn1.textContent = btn1Name
-    buttonContainer.appendChild(nextBtn1);
+    let btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
+    alter.appendChild(btnContainer);
+    let nextBtn1 = document.createElement('button');
+    nextBtn1.style.opacity = '0';
+    nextBtn1.setAttribute('id', btn1IdChoice);
+    nextBtn1.textContent = btn1Name;
+    btnContainer.appendChild(nextBtn1);
     nextBtn1.addEventListener('click', function () {
-        clickFunction(btn1IdChoice);
-    })
-    let nextBtn2 = document.createElement('button')
-    nextBtn2.setAttribute('id', btn2IdChoice)
-    nextBtn2.textContent = btn2Name
-    buttonContainer.appendChild(nextBtn2);
+        whiteWash();
+        setTimeout(()=>{
+            clickFunction(btn1IdChoice);
+        }, 1000);
+    });
+    let nextBtn2 = document.createElement('button');
+    nextBtn2.setAttribute('id', btn2IdChoice);
+    nextBtn2.style.opacity = '0';
+    nextBtn2.textContent = btn2Name;
+    btnContainer.appendChild(nextBtn2);
     nextBtn2.addEventListener('click', function(){
-        clickFunction(btn2IdChoice);
-    })
+        whiteWash();
+        setTimeout(() => {
+            clickFunction(btn2IdChoice);
+        }, 1000);
+    });
+    fadeInMultiple([nextBtn1, nextBtn2])
 }
 
 function createFinalButton(btnName, btnIdChoice, clickFunction) {
     let endButton = document.createElement('button')
+    endButton.style.opacity = '0';
     endButton.setAttribute('id', btnIdChoice)
     endButton.textContent = btnName
     alter.appendChild(endButton);
     endButton.addEventListener('click', function () {
         clickFunction(btnIdChoice);
     })
+    fadeIn(endButton);
 }
 
 

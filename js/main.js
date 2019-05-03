@@ -69,21 +69,6 @@ function resetHome(){
     emptyPoemArray();
 }
 
-function startRecurse(){
-    let title = document.createElement('p');
-    title.textContent = 'click the button below to begin';
-    let startRecursing = document.createElement('button');
-    startRecursing.classList.add('choice');
-    startRecursing.setAttribute('id', 'start-rec')
-    startRecursing.textContent = 'recurse!';
-    alter.appendChild(title)
-    alter.appendChild(startRecursing);
-    startRecursing.addEventListener('click', () => {
-        alter.innerHTML = '';
-        recursivePoem(poemToRecurse)
-    })
-}
-
 
 // ===================================== nav button functionality =========================================== //
 

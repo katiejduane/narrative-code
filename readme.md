@@ -2,15 +2,15 @@
 
 
 # Description
-I came up with this idea because I wanted opportunities to practice writing functions that used various array methods, as well as CSS animations. Since I'm a writer and an artist, the idea of using JavaScript and CSS to create an aesthetic/narrative experience for the user really interested me. What I also enjoyed was the fact that I'd never built anything like this before, so it forced me to do a lot of reading, research, and problem-solving!
+I came up with this idea because I wanted opportunities to practice writing functions that used various array methods to 'create' something for the user. Since I'm a writer and an artist, the idea of using JavaScript and CSS to create an aesthetic/narrative experience for the user really interested me. What I also enjoyed was the fact that I'd never built anything like this before, so it forced me to do a lot of reading, research, and creative problem-solving!
 
 The 'lines' of each poem (there are four in use for this project) are written by me, but pulled, individually, based on user-input, to build a completely differet poem.
 
-Functions, intially, were all different so I could practice different array methods, but were later refactored into two functions that were used repeatedly. A stretch goal is to make the main poem generating function (ie the 'alternative' poem) recursive.
+Functions, intially, were all different so I could practice different array methods, but were later refactored into two functions that were used as needed with different data passed in. 
 
 
 # Technologies
-- Vanilla Javascript, CSS, HTML, chroma.js
+- Vanilla Javascript, CSS, HTML
 - [Datamuse API](https://www.datamuse.com/api/)
 
 # Challenges & Solutions
@@ -32,6 +32,13 @@ Functions, intially, were all different so I could practice different array meth
 # Goals
 - To improve my understanding and skill using various array methods and functions
 - A choice-based narrative experience for the user where they 'create' a poem
-- Use of CSS animations to make the experience more visually stimulating
-- Option to save (email via form) poem and/or 'scramble' the poem upon finishing (WIP)
+- Use of simple CSS animations to make the experience more visually stimulating
+
+# Stretch Goals (WIP)
+- To implement more CSS transitions/animations. 
+- Make the main poem generating function (ie the 'alternative' poem) recursive.
+- Option to save (email via form) poem and/or 'scramble' the poem upon finishing.
+
+* I am working on the stretch goals currently, and my guess is I'll chip away at them slowly, when I have bits of free time! 
+
 

@@ -14,7 +14,7 @@ submitButton.addEventListener('click', (event) => {
     axios.get(wordSearchURL)
         .then(function(res) {
             if (res.data.length === 0) {
-                alter.insertAdjacentHTML('beforeend', "we're not sure that word exists!")
+                alter.insertAdjacentHTML('beforeend', "<p class='error'>we're not sure that word exists!</p>")
             }else{
                 alter.innerHTML = '';
                 printWords(res)
@@ -22,7 +22,7 @@ submitButton.addEventListener('click', (event) => {
         })
         .catch(function(err) {
             if(res.status != 200){
-                alter.insertAdjacentHTML('afterbegin', "oops! there was an error. try again!")
+                alter.insertAdjacentHTML('afterbegin', "<p class='error'>oops! there was an error. try again!</p>")
             }else{
                 console.log(err)
             }
@@ -88,7 +88,8 @@ function printPoem(arr){
     arr = []
     let linkHome = document.createElement('a')
     linkHome.setAttribute('href', 'index.html')
-    linkHome.textContent = 'home'
+    linkHome.textContent = 'home';
+    linkHome.classList.add('home-btn')
     alter.appendChild(linkHome);
 }
 
