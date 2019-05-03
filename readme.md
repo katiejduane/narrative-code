@@ -48,7 +48,7 @@ Functions, intially, were all different so I could practice different array meth
 - Make the main poem generating function (ie the 'alternative' poem) recursive.
 - Option to save (email via form) poem and/or 'scramble' the poem upon finishing.
 
-# I am working on the stretch goals currently, and my guess is I'll chip away at them slowly, when I have bits of free time! #
+I am working on the stretch goals currently, and my guess is I'll chip away at them slowly, when I have bits of free time!
  
  ![narrative image](screenshots/screen-final2.png)
 
