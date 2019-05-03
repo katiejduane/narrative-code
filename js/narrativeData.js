@@ -37,7 +37,7 @@ let poemData = [
 ]
 
 // rescursive data
-let poemToRecurse = ['someplace else', 'time is solid','someplace else','time is something you can touch', 'something you can pick up and take with you', 
+let jasper = ['someplace else', 'time is solid','someplace else','time is something you can touch', 'something you can pick up and take with you', 
 'so it is also something you can break', 'something you can crack in half and look inside of', 'what color would time be', 'if it were a thing?',
 'if it were like a stone', 'that could be broken in two', 'I think: it would break easily', 'I think: it would be blue', 'imagine: time as a stone you could slip inside your pocket and carry', 
 'imagine: time as a stone ground down', 'like sand, like the sand at the edge of a continent',

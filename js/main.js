@@ -67,6 +67,7 @@ function resetHome(){
         startRecurse();
     })
     emptyPoemArray();
+    poemToRecurse = jasper.slice(0)
 }
 
 

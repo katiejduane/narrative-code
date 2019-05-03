@@ -26,5 +26,4 @@ function fadeInMultiple(arr) {
 function whiteWash(){
     alter.style.opacity = '0';
     alter.style.transition = 'opacity 1s';
-    console.log('white')
 }

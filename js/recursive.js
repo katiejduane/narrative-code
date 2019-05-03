@@ -1,3 +1,5 @@
+let poemToRecurse = jasper.slice(0)
+
 
 function startRecurse() {
     let title = document.createElement('p');
@@ -29,7 +31,6 @@ function recursivePoem(arr){
         let randomNum = getRandom(arr)
         createRecursiveLine(arr, recursedPoem, randomNum, 'recursive-line');
         arr.splice(randomNum, 1);
-        console.log(arr)
         setTimeout(() => {
             createRecursiveButton('next', helpKatieRecurse, poemToRecurse);
         }, 1000)
@@ -47,7 +48,6 @@ function createRecursiveLine(arr1, arr2, i, lineClass) {
     alter.appendChild(lineInDOM);
     fadeIn(lineInDOM, 1300);
     arr2.push(thisLine);
-    console.log(arr2)
 }
 
 function createRecursiveButton(btnId, clickFunction, arr) {

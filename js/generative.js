@@ -35,7 +35,6 @@ function printWords(res){
         makePrintButton(generatedPoem);
     }else{
         res.data.forEach((word) => {
-            console.log(word.word)
             let wordBtn = document.createElement('button')
             wordBtn.textContent = word.word;
             wordBtn.classList.add('word-result');
@@ -45,7 +44,6 @@ function printWords(res){
                 let thisWord = event.target.textContent
                 generatedPoem.push(thisWord)
                 addMoreWords(thisWord)
-                console.log(generatedPoem);
             })
             alter.appendChild(wordBtn)
         })
@@ -55,7 +53,6 @@ function printWords(res){
 function addMoreWords(word){
     event.preventDefault();
     let wordChoice = word;
-    console.log(wordChoice)
     let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
     alter.innerHTML = '';
     axios.get(wordSearchURL)
@@ -63,7 +60,11 @@ function addMoreWords(word){
             printWords(res)
         })
         .catch(function(err) {
-            console.log(err)
+            if (res.status != 200) {
+                alter.insertAdjacentHTML('afterbegin', "<p class='error'>how tragic, an error occured!!</p>")
+            } else {
+                console.log(err)
+            }
         })
 }
 
