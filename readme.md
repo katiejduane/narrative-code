@@ -1,5 +1,7 @@
 # Narrative Code Project
 
+![narrative image](_screenshots/screen-welcome.png)
+
 
 # Description
 I came up with this idea because I wanted opportunities to practice writing functions that used various array methods to 'create' something for the user. Since I'm a writer and an artist, the idea of using JavaScript and CSS to create an aesthetic/narrative experience for the user really interested me. What I also enjoyed was the fact that I'd never built anything like this before, so it forced me to do a lot of reading, research, and creative problem-solving!
