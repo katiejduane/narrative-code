@@ -21,7 +21,7 @@ function recursivePoem(arr){
         if(recursedPoem.length === 10){
             setTimeout(() => {
                 alter.innerHTML = '';
-                createRecursiveButton('read poem', 'read-rec-poem', printRecursivePoem, recursedPoem);
+                createRecursiveButton('read-rec-poem', printRecursivePoem, recursedPoem);
             }, 1000)
             return;
         }
