@@ -6,9 +6,10 @@
 # Description
 I came up with this idea because I wanted opportunities to practice writing functions that used various array methods to 'create' something for the user. Since I'm a writer and an artist, the idea of using JavaScript and CSS to create an aesthetic/narrative experience for the user really interested me. What I also enjoyed was the fact that I'd never built anything like this before, so it forced me to do a lot of reading, research, and creative problem-solving!
 
-The 'lines' of each poem (there are four in use for this project) are written by me, but pulled, individually, based on user-input, to build a completely differet poem.
+The 'lines' of each poem (there are four in use for this project) are written by me, but pulled individually from their respective arrays, based on user-input, to build a unique poem.
 
-Functions, intially, were all different so I could practice different array methods, but were later refactored into two functions that were used as needed with different data passed in. 
+The 'generative' option builds a poem while making calls to the Datamuse API. The API call I use employs a "triggered by" search, returning words that are  somehow 'related' to the word typed in, or clicked (ie: 'cow' returns 'milk'). You can get very far from your original word very quickly, ('happy' ... 'onomatopoeia'), which I think makes it fun!
+ 
 
 ![narrative image](screenshots/screen-gen.png)
 
@@ -29,7 +30,7 @@ Functions, intially, were all different so I could practice different array meth
 - Challenge: Initial functions were bulky!
     - Solution: I figured out ways to make them more dynamic and re-usable; utilzing the 'choice' generated with each click to search the corresponding array for the line to be printed to the DOM. I was also able to create a singular function for creating two buttons as once, cutting down on the code within each poem function.
 
-    Eventually, I opted to refactor all functions into two: either a choice-based narration function, or a random number-based narration function. This cleaned things up considerably!
+    Functions were initially all different so I could practice different array methods, but were later refactored into two functions that were used as needed with different data passed in.
 
 - Challenge: I wanted to practice recursion!
     - Solution: I made a third poem option, a recursive poem generator.
