@@ -37,14 +37,14 @@ let poemData = [
 ]
 
 // rescursive data
-let poemToRecurse = ['someplace else', 'time is solid','someplace else','time is something you can touch', 'can pick up and take with you', 
-'so it is also something you can break', 'something you can crack', 'in half and look inside of', 'what color would time be', 'if it were a thing?',
-'if it were like a stone', 'that could be broken in two', 'I think: it would break easily', 'I think: it would be blue', 'imagine: time as a stone',
-'you could slip inside your pocket and carry', 'imagine: time as a stone ground down', 'like sand, like the sand', 'at the edge of a continent',
-'the sand that the sea sinks into', 'vanishing with a sigh', 'with relief', 'after traveling all those miles', 'imagine: time ground even finer:',
+let poemToRecurse = ['someplace else', 'time is solid','someplace else','time is something you can touch', 'something you can pick up and take with you', 
+'so it is also something you can break', 'something you can crack in half and look inside of', 'what color would time be', 'if it were a thing?',
+'if it were like a stone', 'that could be broken in two', 'I think: it would break easily', 'I think: it would be blue', 'imagine: time as a stone you could slip inside your pocket and carry', 
+'imagine: time as a stone ground down', 'like sand, like the sand at the edge of a continent',
+'the sand that the sea sinks into', 'vanishing with a sigh, with relief, after traveling all those miles', 'imagine: time ground even finer:',
 'like dust, it would settle and then drift','floating in and out of the sunlight', 'becoming and unbecoming without end', 'here: I am always so busy fighting with time', 
-'with its absurd need to continue', 'all that forward momentum', 'but in this someplace else', 'I’m careful with it', 'sitting there', 'my arms outstretched, waiting',
-'for time to fall', 'ready to catch it, but', 'so afraid: to miss it', 'so prepared: to lose', 'and later, when they examine the crash site', 'I’m long gone, but the stone that fell',
+'with its absurd need to continue all that forward momentum', 'but in this someplace else, I’m careful with it', 'sitting there, my arms outstretched',
+'waiting for time to fall', 'ready to catch it, but', 'so afraid: to miss it, so prepared: to lose', 'and later, when they examine the crash site', 'I’m long gone, but the stone that fell',
 'It’s called Jasper, he says', 'most often red, but in this case: blue'];
 
 
