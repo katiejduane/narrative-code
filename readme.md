@@ -1,6 +1,6 @@
 # Narrative Code Project
 
-![narrative image](_screenshots/screen-welcome.png)
+![narrative image](screenshots/screen-welcome.png)
 
 
 # Description
