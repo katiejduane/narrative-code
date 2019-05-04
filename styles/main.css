@@ -108,7 +108,7 @@ button{
 
 button:hover{
     filter: invert(1);
-    text-decoration: underline;
+    /* text-decoration: underline; */
     outline: none;
     border: none;
     cursor: crosshair;
