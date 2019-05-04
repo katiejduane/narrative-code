@@ -24,9 +24,10 @@ function aboutNarrative(){
 }
 
 function resetHome(){
-    //there isa slight glitch here. if the user clicks 'begin again' and they have a set time out running for create buttons;
+    //there is a slight glitch here. if the user clicks 'begin again' and they have a set time out running for create buttons;
     //the buttons are appended to the dom and so sit below the 'welcome'. maybe creating a button should clear out the dom? or,
     //if begin again or ? are clicked, the set time out function needs to be cancelled somehow...? idk...
+    alter.style.opacity = "1";
     alter.innerHTML = '';
     let welcome = document.createElement('div');
     welcome.classList.add('welcome');
