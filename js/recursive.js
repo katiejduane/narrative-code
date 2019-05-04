@@ -1,6 +1,5 @@
 let poemToRecurse = jasper.slice(0)
 
-
 function startRecurse() {
     let title = document.createElement('p');
     title.textContent = 'click the button below to begin';
@@ -15,7 +14,6 @@ function startRecurse() {
         recursivePoem(poemToRecurse)
     })
 }
-
 
 function recursivePoem(arr){
     var recursedPoem = [];
@@ -66,11 +64,14 @@ function createRecursiveButton(btnId, clickFunction, arr) {
 
 function printRecursivePoem(arr) {
     alter.innerHTML = '';
+    let poemBox = document.createElement('div');
+    poemBox.classList.add('poem-box');
+    alter.appendChild(poemBox);
     arr.forEach(function (line) {
-        let lineOfPoem = document.createElement('DIV');
+        let lineOfPoem = document.createElement('div');
         lineOfPoem.classList.add('poem-line');
         lineOfPoem.textContent = line;
-        alter.appendChild(lineOfPoem);
+        poemBox.appendChild(lineOfPoem);
     });
     createFinalButton('let go', 'letGo', letGo, arr);
 }

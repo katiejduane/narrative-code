@@ -265,7 +265,7 @@ button:hover{
 }
 
 .recursive-line{
-    padding: 0.5rem;
+    margin: 0.5rem;
 
 }
 
@@ -294,6 +294,11 @@ button:hover{
     opacity: 0;
     transition: opacity 1s;
     z-index: -1;
+}
+
+/* printed poems */
+.poem-box{
+    text-align: center;
 }
 
 

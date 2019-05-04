@@ -6,7 +6,7 @@ let air = poemData[2].lines
 
 //click function that asks user questions to create poem 
 function startPoem(question, opt1, opt2, id1, id2) {
-    let title = document.createElement('h2');
+    let title = document.createElement('h3');
     title.textContent = question;
     let btnContainer = document.createElement('div');
     btnContainer.classList.add('btn-container');
@@ -83,7 +83,7 @@ function seventhLine(choice){
 }
 
 function eighthLine(choice){
-    narrateRandom(firstRain, choice)
+    narrateChoice(firstRain, choice)
     setTimeout(() => {
         createButtons('rays', 'rays', 'heaps', 'heaps', ninthLine);
     }, 1000);
@@ -137,7 +137,6 @@ function createLine(arr, i){
     alter.appendChild(lineInDOM);
     fadeIn(lineInDOM, 1300)
     poemArray.push(thisLine);
-    console.log(poemArray)
 }
 
 function createButtons(btn1Name, btn1IdChoice, btn2Name, btn2IdChoice, clickFunction){
@@ -176,7 +175,10 @@ function createFinalButton(btnName, btnIdChoice, clickFunction) {
     endButton.textContent = btnName
     alter.appendChild(endButton);
     endButton.addEventListener('click', function () {
-        clickFunction(btnIdChoice);
+        whiteWash();
+        setTimeout(()=>{
+            clickFunction(btnIdChoice);
+        },1000);
     })
     fadeIn(endButton);
 }
@@ -190,11 +192,14 @@ function getRandom(arr){
 //functions for finishing/printing/scrambling/saving poem!
 function printPoem(){
     alter.innerHTML = '';
+    let poemBox = document.createElement('div');
+    poemBox.classList.add('poem-box');
+    alter.appendChild(poemBox);
     poemArray.forEach(function(line){
         let lineOfPoem = document.createElement('DIV');
         lineOfPoem.classList.add('poem-line');
         lineOfPoem.textContent = line;
-        alter.appendChild(lineOfPoem);
+        poemBox.appendChild(lineOfPoem);
     });
     createFinalButton('let go', 'letGo', letGo, poemArray);
 }
