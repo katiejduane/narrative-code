@@ -8,13 +8,20 @@ let generatedPoem = [];
 
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
+    if(alter.contains(document.getElementById('error'))){
+        document.getElementById('error').remove()
+    }
     let wordChoice = wordInput.value;
     generatedPoem.push(wordChoice)
     let wordSearchURL = `${apiBaseUrl}${wordChoice}&max=5`
     axios.get(wordSearchURL)
         .then(function(res) {
             if (res.data.length === 0) {
-                alter.insertAdjacentHTML('beforeend', "<p class='error'>we're not sure that word exists!</p>")
+                generatedPoem.pop();
+                let notFound = document.createElement('p');
+                notFound.setAttribute('id', 'error');
+                notFound.textContent = "we're not sure that word exists!";
+                alter.appendChild(notFound);
             }else{
                 alter.innerHTML = '';
                 printWords(res)
